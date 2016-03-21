@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/register_title"/>
+    <include layout="@layout/register_three_step"/>
+    <EditText
+        android:id="@id/etInputVerification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_distance"
+        android:hint="@string/hint_input_verification"
+        style="@style/text_nor"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="@dimen/padding_distance"
+        android:paddingStart="@dimen/padding_distance"
+        android:paddingEnd="@dimen/padding_distance"
+        android:paddingRight="@dimen/padding_distance"
+        android:inputType="phone"
+        android:background="@drawable/edit_input"/>
+    <Button
+        android:id="@id/commitVerification"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin_button_distance"
+        android:text="@string/commit_verification"
+        android:textColor="@color/white"
+        style="@style/text_nor"
+        android:background="@drawable/button_gray" />
+</LinearLayout>

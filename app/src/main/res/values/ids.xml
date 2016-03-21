@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- login-->
+    <item name="backLeftWhite" type="id"/>
+    <item name="inputPhoneNumber" type="id"/>
+    <item name="inputPassword" type="id"/>
+    <item name="ivPhoneNumber" type="id"/>
+    <item name="ivPassword" type="id"/>
+    <item name="checkSwitch" type="id"/>
+    <item name="btLogin" type="id"/>
+    <item name="forgetPassword" type="id"/>
+    <item name="tvLoginAgree" type="id"/>
+    <item name="ThirdPartyLogin" type="id"/>
+    <!-- phone_verification_login-->
+    <item name="obtainVerifyCode" type="id"/>
+    <item name="accountPsdLogin" type="id"/>
+    <item name="verifyLogin" type="id"/>
+    <item name="ivQQ" type="id"/>
+    <item name="ivWeChat" type="id"/>
+
+    <!-- register-->
+    <item name="inputPhone" type="id"/>
+    <item name="setPassword" type="id"/>
+    <item name="etInputPhone" type="id"/>
+    <item name="getVerification" type="id"/>
+    <item name="checkBox" type="id"/>
+    <item name="userContract" type="id"/>
+    <item name="etInputVerification" type="id"/>
+    <item name="commitVerification" type="id"/>
+    <item name="switchChecked" type="id"/>
+    <item name="setLoginPassword" type="id"/>
+    <item name="invitationCode" type="id"/>
+    <item name="commitLogin" type="id"/>
+
+    <!-- home-->
+    <item name="tvLocation" type="id"/>
+    <item name="dropdownList" type="id"/>
+    <item name="scan" type="id"/>
+    <item name="tvHome" type="id"/>
+    <item name="tvReservation" type="id"/>
+    <item name="tvMy" type="id"/>
+    <item name="homeTitle" type="id"/>
+    <item name="hydroelectricManager" type="id"/>
+    <item name="featureManager" type="id"/>
+    <item name="storeManager" type="id"/>
+    <item name="anniversaryManager" type="id"/>
+
+</resources>

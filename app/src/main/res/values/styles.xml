@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+    <style name="divider_large">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_lager</item>
+        <item name="android:background">@color/gray_middle</item>
+    </style>
+    <style name="divider_vertical">
+        <item name="android:layout_width">@dimen/divider</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/gray</item>
+    </style>
+    <style name="divider_vertical_larger">
+        <item name="android:layout_width">@dimen/divider_lager</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/gray_middle</item>
+    </style>
+    <style name="text_small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="text_nor">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_nor_bottom_gray">
+        <item name="android:textColor">@color/gray_text_nor</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_nor_blue">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="text_nor_bottom_yellow">
+        <item name="android:textColor">@color/amber</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="text_big">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text_large">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

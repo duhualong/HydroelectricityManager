@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">水电管家</string>
+    <!-- login-->
+    <string name="login">登录</string>
+    <string name="immediate_register">立即注册</string>
+    <string name="et_hint_input_phone_number">请输入手机号</string>
+    <string name="et_hint_input_password">请输入密码</string>
+    <string name="tv_forget_password">忘记密码?</string>
+    <string name="user_contract">《水电管家用户协议》</string>
+    <string name="tv_login_agree">登录/注册说明您已同意</string>
+    <!-- phone_verification_login-->
+    <string name="phone_verification_login">手机验证登录</string>
+    <string name="obtain_verify_code">获取验证码</string>
+    <string name="phone_create_account">未注册的手机将自动创建为水电管家账户</string>
+    <string name="account_password_login">账号密码登录</string>
+    <string name="verification_login">验证并登录</string>
+    <string name="QQ">QQ</string>
+    <string name="weChat">微信</string>
+    <!-- register-->
+    <string name="register">注册</string>
+    <string name="register_first">1输入手机号</string>
+    <string name="register_second">2输入验证码</string>
+    <string name="register_third">3设置密码</string>
+    <string name="hint_input_password_register">请输入您的手机号</string>
+    <string name="getVerification">获取验证码</string>
+    <string name="Agreeable">我已同意并接受</string>
+    <string name="resend_verification">(60s)重发验证码</string>
+    <string name="hint_input_verification">请输入手机获取的短信验证码</string>
+    <string name="commit_verification">提交验证码</string>
+    <string name="set_login_password_hint">请设置登录密码</string>
+    <string name="invitation_code_hint">请输入邀请码(选填)</string>
+    <string name="passwordLength">密码长度6&#8211;20字符</string>
+    <string name="commit_login">提交并登录</string>
+    <string name="setting_password">设置密码</string>
+    
+    <!-- home-->
+    <string name="tvLocation">正在定位中&#8230;</string>
+    <string name="hydroelectric_manager">水电管家</string>
+    <string name="home">首页</string>
+    <string name="reservation">马上预约</string>
+    <string name="my">个人中心</string>
+    <string name="feature_manager">特色管家</string>
+    <string name="store_manager">管家商城</string>
+    <string name="anniversary_manager">管家包年</string>
+</resources>

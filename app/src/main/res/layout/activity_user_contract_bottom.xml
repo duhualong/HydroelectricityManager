@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+   android:layout_marginTop="@dimen/top_distance">
+    <TextView
+        android:id="@id/tvLoginAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_nor"
+        android:text="@string/tv_login_agree"/>
+    <TextView
+        android:id="@id/userContract"
+        android:layout_toEndOf="@id/tvLoginAgree"
+        android:layout_toRightOf="@id/tvLoginAgree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/text_nor"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/user_contract"/>
+</RelativeLayout>

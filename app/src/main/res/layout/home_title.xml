@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/color_gradient_theme">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_on_white"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/location_left_distance"
+        android:layout_marginLeft="@dimen/location_left_distance"/>
+    <TextView
+        android:id="@id/tvLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvLocation"
+        android:layout_centerInParent="true"
+        style="@style/text_big"
+        android:textColor="@color/white"/>
+<ImageView
+    android:id="@id/dropdownList"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/dropdown_list"
+    android:padding="@dimen/padding_drawable"
+    android:layout_marginLeft="@dimen/left_distance"
+    android:layout_marginStart="@dimen/left_distance"
+    android:layout_toRightOf="@id/tvLocation"
+    android:layout_toEndOf="@id/tvLocation"
+    android:layout_centerVertical="true"
+    />
+    <ImageView
+        android:id="@id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_scan"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/padding_drawable"
+        android:layout_marginRight="@dimen/right_distance_large"
+        android:layout_marginEnd="@dimen/right_distance_large"/>
+</RelativeLayout>
