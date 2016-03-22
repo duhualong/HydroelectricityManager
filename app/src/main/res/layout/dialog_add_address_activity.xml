@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f7f7f7"
+    >
+    <ImageView
+        android:id="@id/circlePoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_circle_point"
+        android:padding="@dimen/padding_drawable"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_add_dialog"
+        android:layout_below="@id/circlePoint"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_drawable"
+        android:layout_alignParentRight="true">
+        <TextView
+            android:id="@id/editAddress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/edit"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@color/gray_middle"
+    android:layout_weight="0"/>
+        <TextView
+            android:id="@id/deleteAddress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/delete"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

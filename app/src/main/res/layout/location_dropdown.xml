@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/color_gradient_theme" >
+        <ImageView
+            android:id="@id/backLeftWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_arrow_left_white"/>
+        <EditText
+            android:id="@id/inputAddress"
+            android:layout_toEndOf="@id/backLeftWhite"
+            android:layout_toRightOf="@id/backLeftWhite"
+            android:layout_width="match_parent"
+            android:layout_toStartOf="@id/tvSearch"
+            android:layout_toLeftOf="@id/tvSearch"
+            android:hint="@string/input_address"
+            style="@style/text_big"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@id/deleteAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/false_right_distance"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/false_right_distance"
+            android:src="@drawable/ic_false"/>
+
+        <TextView
+            android:id="@id/tvSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_big"
+            android:layout_marginEnd="@dimen/right_distance"
+            android:layout_marginRight="@dimen/right_distance"
+            android:text="@string/search"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_marginTop="@dimen/small_top_distance"
+        android:background="@color/white">
+        <TextView
+            android:id="@id/tvPosition"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:drawableLeft="@drawable/ic_location_button"
+            android:drawableStart="@drawable/ic_location_button"
+            android:layout_marginLeft="@dimen/left_distance"
+            android:layout_marginStart="@dimen/left_distance"
+            android:drawablePadding="@dimen/padding_drawable"
+            android:text="@string/tv_location"
+            style="@style/text_nor"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

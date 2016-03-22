@@ -17,7 +17,7 @@
         android:paddingEnd="@dimen/padding_distance"
         android:paddingRight="@dimen/padding_distance"
         android:inputType="phone"
-        android:background="@drawable/edit_input"/>
+        android:background="@drawable/edit_no_input"/>
     <Button
         android:id="@id/getVerification"
         android:layout_width="match_parent"

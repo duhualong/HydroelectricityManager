@@ -12,6 +12,11 @@
         <item name="android:layout_height">@dimen/divider</item>
         <item name="android:background">@color/gray</item>
     </style>
+    <style name="divider_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/divider</item>
+        <item name="android:background">@color/gray</item>
+    </style>
     <style name="divider_large">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/divider_lager</item>
@@ -44,7 +49,7 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="text_nor_bottom_yellow">
-        <item name="android:textColor">@color/amber</item>
+        <item name="android:textColor">@color/orange</item>
         <item name="android:textSize">14sp</item>
     </style>
 

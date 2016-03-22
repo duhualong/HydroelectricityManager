@@ -1,48 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- login-->
-    <item name="backLeftWhite" type="id"/>
-    <item name="inputPhoneNumber" type="id"/>
-    <item name="inputPassword" type="id"/>
-    <item name="ivPhoneNumber" type="id"/>
-    <item name="ivPassword" type="id"/>
-    <item name="checkSwitch" type="id"/>
-    <item name="btLogin" type="id"/>
-    <item name="forgetPassword" type="id"/>
-    <item name="tvLoginAgree" type="id"/>
-    <item name="ThirdPartyLogin" type="id"/>
+    <item name="backLeftWhite" type="id" />
+    <item name="inputPhoneNumber" type="id" />
+    <item name="inputPassword" type="id" />
+    <item name="ivPhoneNumber" type="id" />
+    <item name="ivPassword" type="id" />
+    <item name="checkSwitch" type="id" />
+    <item name="btLogin" type="id" />
+    <item name="forgetPassword" type="id" />
+    <item name="tvLoginAgree" type="id" />
+    <item name="ThirdPartyLogin" type="id" />
     <!-- phone_verification_login-->
-    <item name="obtainVerifyCode" type="id"/>
-    <item name="accountPsdLogin" type="id"/>
-    <item name="verifyLogin" type="id"/>
-    <item name="ivQQ" type="id"/>
-    <item name="ivWeChat" type="id"/>
+    <item name="obtainVerifyCode" type="id" />
+    <item name="accountPsdLogin" type="id" />
+    <item name="verifyLogin" type="id" />
+    <item name="ivQQ" type="id" />
+    <item name="ivWeChat" type="id" />
 
     <!-- register-->
-    <item name="inputPhone" type="id"/>
-    <item name="setPassword" type="id"/>
-    <item name="etInputPhone" type="id"/>
-    <item name="getVerification" type="id"/>
-    <item name="checkBox" type="id"/>
-    <item name="userContract" type="id"/>
-    <item name="etInputVerification" type="id"/>
-    <item name="commitVerification" type="id"/>
-    <item name="switchChecked" type="id"/>
-    <item name="setLoginPassword" type="id"/>
-    <item name="invitationCode" type="id"/>
-    <item name="commitLogin" type="id"/>
+    <item name="inputPhone" type="id" />
+    <item name="setPassword" type="id" />
+    <item name="etInputPhone" type="id" />
+    <item name="getVerification" type="id" />
+    <item name="checkBox" type="id" />
+    <item name="userContract" type="id" />
+    <item name="etInputVerification" type="id" />
+    <item name="commitVerification" type="id" />
+    <item name="switchChecked" type="id" />
+    <item name="setLoginPassword" type="id" />
+    <item name="invitationCode" type="id" />
+    <item name="commitLogin" type="id" />
 
     <!-- home-->
-    <item name="tvLocation" type="id"/>
-    <item name="dropdownList" type="id"/>
-    <item name="scan" type="id"/>
-    <item name="tvHome" type="id"/>
-    <item name="tvReservation" type="id"/>
-    <item name="tvMy" type="id"/>
-    <item name="homeTitle" type="id"/>
-    <item name="hydroelectricManager" type="id"/>
-    <item name="featureManager" type="id"/>
-    <item name="storeManager" type="id"/>
-    <item name="anniversaryManager" type="id"/>
+    <item name="tvLocation" type="id" />
+    <item name="dropdownList" type="id" />
+    <item name="scan" type="id" />
+    <item name="tvHome" type="id" />
+    <item name="tvReservation" type="id" />
+    <item name="tvMy" type="id" />
+    <item name="homeTitle" type="id" />
+    <item name="hydroelectricManager" type="id" />
+    <item name="featureManager" type="id" />
+    <item name="storeManager" type="id" />
+    <item name="anniversaryManager" type="id" />
+    <item name="tvSearch" type="id" />
+    <item name="inputAddress" type="id" />
+    <item name="deleteAddress" type="id" />
+    <item name="tvPosition" type="id" />
+
+    <!-- my-->
+    <item name="headPortrait" type="id" />
+    <item name="name" type="id" />
+    <item name="phone" type="id" />
+    <item name="alterNews" type="id" />
+    <item name="myHead" type="id" />
+    <item name="accountBalance" type="id" />
+    <item name="collectionNumber" type="id" />
+    <item name="discountCoupon" type="id" />
+    <item name="myReservation" type="id" />
+    <item name="myService" type="id" />
+    <item name="lifeService" type="id" />
+    <item name="addressManage" type="id" />
+    <item name="customerHotLine" type="id" />
+    <item name="blackRightBack" type="id" />
+    <item name="circlePoint" type="id" />
+    <item name="editAddress" type="id" />
+    <item name="noAddress" type="id" />
+    <item name="address" type="id" />
+    <item name="finishedAddressEdit" type="id" />
+    <item name="contacts" type="id" />
+    <item name="editContacts" type="id" />
+    <item name="phoneNumber" type="id" />
+    <item name="editPhoneNumber" type="id" />
+    <item name="selectTown" type="id" />
+    <item name="editSelectTown" type="id" />
+    <item name="editDetailAddress" type="id" />
+    <item name="detailAddress" type="id" />
+    <item name="checkBoxAddress" type="id" />
+
 
 </resources>

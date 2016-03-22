@@ -10,6 +10,7 @@
     <dimen name="middle_left_distance">15dp</dimen>
     <dimen name="small_left_distance">5dp</dimen>
     <dimen name="right_distance">10dp</dimen>
+    <dimen name="right_distance_middle">20dp</dimen>
     <dimen name="right_distance_large">25dp</dimen>
     <dimen name="button_height">36dp</dimen>
     <dimen name="margin_button_distance">20dp</dimen>
@@ -17,6 +18,8 @@
     <dimen name="small_top_distance">10dp</dimen>
     <dimen name="middle_top_distance">15dp</dimen>
     <dimen name="middle_top_distance_large">20dp</dimen>
+    <dimen name="liner_layout_height">80dp</dimen>
+    <dimen name="my_content_height">60dp</dimen>
 
     <dimen name="padding_drawable">10dp</dimen>
     <dimen name="small_padding_drawable">5dp</dimen>
@@ -25,4 +28,11 @@
     <dimen name="banner_height">196dp</dimen>
     <dimen name="manager_height">140dp</dimen>
     <dimen name="location_left_distance">100dp</dimen>
+    <dimen name="false_right_distance">75dp</dimen>
+    <dimen name="head_image_size">80dp</dimen>
+    <dimen name="head_image_top_distance">40dp</dimen>
+    <dimen name="text_padding">6dp</dimen>
+    <dimen name="text_padding_middle">10dp</dimen>
+    <dimen name="text_padding_large">15dp</dimen>
+    <dimen name="drawable_top_distance">60dp</dimen>
 </resources>

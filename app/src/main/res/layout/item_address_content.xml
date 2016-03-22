@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/middle_top_distance"
+    android:layout_marginBottom="@dimen/middle_top_distance"
+    android:background="@color/white"
+    android:layout_height="@dimen/liner_layout_height">
+<TextView
+    android:id="@id/name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/text_padding"
+    android:layout_marginLeft="@dimen/middle_left_distance"
+    style="@style/text_nor"
+    android:layout_marginTop="@dimen/small_top_distance"
+    android:layout_marginStart="@dimen/middle_left_distance"
+    android:text="@string/name"/>
+    <TextView
+        android:id="@id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/text_padding"
+        android:layout_marginLeft="@dimen/middle_left_distance"
+        style="@style/text_nor"
+        android:layout_toRightOf="@id/name"
+        android:layout_toEndOf="@id/name"
+        android:layout_marginTop="@dimen/small_top_distance"
+        android:layout_marginStart="@dimen/middle_left_distance"
+        android:text="@string/phone"/>
+    <TextView
+        android:id="@id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:padding="@dimen/text_padding"
+        android:text="@string/address"
+        style="@style/text_nor"
+        android:layout_alignLeft="@id/name"
+        android:layout_alignStart="@id/name"/>
+
+</RelativeLayout>

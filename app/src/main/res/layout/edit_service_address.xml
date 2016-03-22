@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_middle">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/color_gradient_theme">
+
+        <ImageView
+            android:id="@id/backLeftWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_left_white" />
+
+        <TextView
+            style="@style/text_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/backLeftWhite"
+            android:layout_toRightOf="@id/backLeftWhite"
+            android:text="@string/edit_address_service"
+            android:textColor="@color/white" />
+        <ImageView
+            android:id="@id/finishedAddressEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_edit_address_finished"
+            android:padding="@dimen/padding_drawable"/>
+    </RelativeLayout>
+    <include layout="@layout/edit_service_address_content"/>
+</LinearLayout>

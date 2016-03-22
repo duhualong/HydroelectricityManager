@@ -42,4 +42,40 @@
     <string name="feature_manager">特色管家</string>
     <string name="store_manager">管家商城</string>
     <string name="anniversary_manager">管家包年</string>
+    <string name="search">搜索</string>
+    <string name="input_address">请输入地址</string>
+    <string name="tv_location">定位到当前位置</string>
+
+    <!-- my-->
+    <string name="name">姓名</string>
+    <string name="phone">电话</string>
+    <string name="account_money">%1$s元</string>
+    <string name="my_balance">我的余额</string>
+    <string name="discount_money">%1$s元</string>
+    <string name="discount_coupon">优惠券</string>
+    <string name="collection_number">%1$s条</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="my_reservation">我的预约</string>
+    <string name="my_service">我的服务</string>
+    <string name="life_service">生活服务</string>
+    <string name="address_manage">地址管理</string>
+    <string name="customer_hot_line">客服热线</string>
+    <string name="hot_line_phone">400&#8211;850&#8211;8888</string>
+    <string name="service_address">服务地址</string>
+    <string name="add">新增</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="no_always_use_address">您还没有常用地址哦</string>
+    <string name="address">地址</string>
+    <string name="edit_address_service">编辑服务地址</string>
+    <string name="contacts">联&#x0020;&#x0020;系&#x0020;&#x0020;人：</string>
+    <string name="hint_contacts">请填写收货人的姓名</string>
+    <string name="phone_number">手机号码：</string>
+    <string name="hint_receiver_delivery_phone">请填写收获手机号码</string>
+    <string name="select_town">选择市区：</string>
+    <string name="hint_select_town">请选择省市区县</string>
+    <string name="detail_address">详细地址：</string>
+    <string name="hint_detail_address">请输入街道、楼号、门牌号等详细信息</string>
+    <string name="setting_default_address">设置为默认地址</string>
+
 </resources>
