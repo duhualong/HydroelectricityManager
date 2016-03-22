@@ -78,6 +78,12 @@
     <item name="editDetailAddress" type="id" />
     <item name="detailAddress" type="id" />
     <item name="checkBoxAddress" type="id" />
+    <item name="lvMyService" type="id" />
+    <item name="itemDrawableService" type="id" />
+    <item name="itemServiceName" type="id" />
+    <item name="itemServicePrice" type="id" />
+    <item name="addition" type="id" />
+
 
 
 </resources>

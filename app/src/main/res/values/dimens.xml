@@ -19,11 +19,14 @@
     <dimen name="middle_top_distance">15dp</dimen>
     <dimen name="middle_top_distance_large">20dp</dimen>
     <dimen name="liner_layout_height">80dp</dimen>
+    <dimen name="liner_layout_height_large">100dp</dimen>
     <dimen name="my_content_height">60dp</dimen>
 
     <dimen name="padding_drawable">10dp</dimen>
     <dimen name="small_padding_drawable">5dp</dimen>
     <dimen name="padding_distance">20dp</dimen>
+    <dimen name="padding_left">5dp</dimen>
+    <dimen name="padding_right">20dp</dimen>
 
     <dimen name="banner_height">196dp</dimen>
     <dimen name="manager_height">140dp</dimen>
@@ -35,4 +38,8 @@
     <dimen name="text_padding_middle">10dp</dimen>
     <dimen name="text_padding_large">15dp</dimen>
     <dimen name="drawable_top_distance">60dp</dimen>
+    <dimen name="item_service_drawable_width">150dp</dimen>
+    <dimen name="item_service_drawable_height">80dp</dimen>
+
+    <dimen name="line_spacing">3dp</dimen>
 </resources>
