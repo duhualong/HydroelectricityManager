@@ -82,6 +82,7 @@
     <string name="addition">添加</string>
     <string name="discount_coupon_use_state">优惠券使用说明</string>
     <string name="discount_coupon_money">￥</string>
+    <string name="discount_coupon_number">%1$s</string>
     <string name="discount_coupon_use_way">水电维修专用</string>
     <string name="discount_coupon_use_lowest">满%1$s可用</string>
     <string name="discount_coupon_out_date">还有%1$s天过期</string>
@@ -89,6 +90,36 @@
     <string name="discount_coupon_phone">1881772121</string>
     <string name="discount_coupon_date">2016&#8211;04&#8211;01</string>
     <string name="discount_coupon_online_payment">,App下单使用，在线支付专享</string>
-    
+    <string name="exchange_code_discount_coupon">请输入优惠券兑换码</string>
+    <string name="password_discount_coupon">请输入优惠券密码</string>
+    <string name="my_reservation_maintenance_projects">软管维修</string>
+    <string name="my_reservation_evaluation">待评价</string>
+    <string name="my_reservation_description_problem">弟弟大赛是多久啊环境和可靠的卡卡的多久啊环境和可靠的卡卡的多久啊环境和可靠的卡卡的多久啊环境和可靠的卡卡的经济</string>
+    <string name="my_reservation_time">预约时间：</string>
+    <string name="my_reservation_date">2016&#8211;04&#8211;01&#x0020;&#x0020;10:20</string>
+    <string name="my_reservation_price">￥85.00</string>
+    <string name="my_reservation_evaluation_immediately">立即评价</string>
+
+    <!-- reservation马上预约-->
+    <string name="hydroelectricity_service">水电服务</string>
+    <string name="electricity_light_path">电灯灯路</string>
+    <string name="faucet_fitting">龙头管件</string>
+    <string name="bathroom_sanitary">卫浴洁具</string>
+    <string name="rush_pipe">管道疏通</string>
+    <string name="others">其它</string>
+    <string name="feature_service">特色服务</string>
+    <string name="anniversary_service">包年服务</string>
+    <string name="service_demand">服务需求</string>
+    <string name="project">项目</string>
+    <string name="plumber">水电工</string>
+    <string name="dig_up_clean">开荒保洁</string>
+    <string name="formalin_govern">甲醛治理</string>
+    <string name="appliance_clean">家电清洗</string>
+    <string name="maintain_home">居家保养</string>
+
+
+
+
+
 
 </resources>

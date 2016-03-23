@@ -6,8 +6,10 @@
     <dimen name="divider_lager">5dp</dimen>
     <dimen name="height_edit_text">45dp</dimen>
     <dimen name="height_distance">30dp</dimen>
+    <dimen name="margin_distance">10dp</dimen>
     <dimen name="left_distance">10dp</dimen>
     <dimen name="middle_left_distance">15dp</dimen>
+    <dimen name="large_left_distance">30dp</dimen>
     <dimen name="small_left_distance">5dp</dimen>
     <dimen name="right_distance">10dp</dimen>
     <dimen name="right_distance_middle">20dp</dimen>
@@ -16,11 +18,13 @@
     <dimen name="margin_button_distance">20dp</dimen>
     <dimen name="top_distance">30dp</dimen>
     <dimen name="small_top_distance">10dp</dimen>
+    <dimen name="smaller_top_distance">6dp</dimen>
     <dimen name="middle_top_distance">15dp</dimen>
     <dimen name="middle_top_distance_large">20dp</dimen>
     <dimen name="liner_layout_height">80dp</dimen>
     <dimen name="liner_layout_height_large">100dp</dimen>
     <dimen name="my_content_height">60dp</dimen>
+    <dimen name="item_height">150dp</dimen>
 
     <dimen name="padding_drawable">10dp</dimen>
     <dimen name="small_padding_drawable">5dp</dimen>

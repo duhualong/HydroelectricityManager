@@ -40,6 +40,10 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="text_nor_gray">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="text_nor_bottom_gray">
         <item name="android:textColor">@color/gray_text_nor</item>
         <item name="android:textSize">14sp</item>

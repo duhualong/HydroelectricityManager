@@ -83,7 +83,36 @@
     <item name="itemServiceName" type="id" />
     <item name="itemServicePrice" type="id" />
     <item name="addition" type="id" />
+    <item name="discountState" type="id" />
+    <item name="listDiscountCoupon" type="id" />
+    <item name="itemMoneySymbol" type="id" />
+    <item name="itemLowestUse" type="id" />
+    <item name="itemDiscountAmount" type="id" />
+    <item name="itemDiscountUseWay" type="id" />
+    <item name="itemDiscountPhone" type="id" />
+    <item name="itemLine" type="id" />
+    <item name="itemDiscountOutDate" type="id" />
+    <item name="itemDiscountDate" type="id" />
+    <item name="discountExchangeCode" type="id" />
+    <item name="myReservationEdit" type="id" />
+    <item name="listMyReservation" type="id" />
+    <item name="maintenanceProjects" type="id" />
+    <item name="itemReservationEvaluation" type="id" />
+    <item name="descriptionProblem" type="id" />
+    <item name="reservationTime" type="id" />
+    <item name="reservationDate" type="id" />
+    <item name="itemLines" type="id" />
+    <item name="maintenancePrice" type="id" />
+    <item name="btEvaluation" type="id" />
 
-
+<!--reservation 立即预约-->
+    <item name="electricityLightPath" type="id"/>
+    <item name="faucetFitting" type="id"/>
+    <item name="bathroomSanitary" type="id"/>
+    <item name="rushPipe" type="id"/>
+    <item name="others" type="id"/>
+    <item name="featureService" type="id"/>
+    <item name="anniversaryService" type="id"/>
+    <item name="hydroelectricityService" type="id"/>
 
 </resources>
