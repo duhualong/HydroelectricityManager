@@ -30,6 +30,7 @@
     <dimen name="small_padding_drawable">5dp</dimen>
     <dimen name="padding_distance">20dp</dimen>
     <dimen name="padding_left">5dp</dimen>
+    <dimen name="padding_top">5dp</dimen>
     <dimen name="padding_right">20dp</dimen>
 
     <dimen name="banner_height">196dp</dimen>
@@ -44,6 +45,13 @@
     <dimen name="drawable_top_distance">60dp</dimen>
     <dimen name="item_service_drawable_width">150dp</dimen>
     <dimen name="item_service_drawable_height">80dp</dimen>
+    <dimen name="drawable_size">100dp</dimen>
+    <dimen name="button_width">70dp</dimen>
+    <dimen name="button_width_large">90dp</dimen>
+    <dimen name="button_height_small">32dp</dimen>
+
 
     <dimen name="line_spacing">3dp</dimen>
+    <dimen name="line_width">75dp</dimen>
+    <dimen name="line_height">2dp</dimen>
 </resources>

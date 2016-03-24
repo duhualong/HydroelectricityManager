@@ -32,7 +32,7 @@
     <string name="passwordLength">密码长度6&#8211;20字符</string>
     <string name="commit_login">提交并登录</string>
     <string name="setting_password">设置密码</string>
-    
+
     <!-- home-->
     <string name="tvLocation">正在定位中&#8230;</string>
     <string name="hydroelectric_manager">水电管家</string>
@@ -116,10 +116,37 @@
     <string name="formalin_govern">甲醛治理</string>
     <string name="appliance_clean">家电清洗</string>
     <string name="maintain_home">居家保养</string>
-
-
-
-
+    <string name="publication_requirement">发布需求</string>
+    <string name="maintain_project">维修项目：</string>
+    <string name="select_maintain_project">龙头管件</string>
+    <string name="problem_description">问题描述：</string>
+    <string name="hint_description_problem">请详细描述问题，维修师傅会更好的服务</string>
+    <string name="upload_photo">上传照片</string>
+    <string name="please_upload_photo">请上传照片，服务更快捷</string>
+    <string name="service_time">服务时间</string>、
+    <string name="hint_select_address">请选择地址</string>
+    <string name="immediate_pay">立即支付</string>
+    <string name="requirement_price">￥80.00</string>
+    <string name="order_confirm">订单确认</string>
+    <string name="tel">13835356985</string>
+    <string name="order_service_address">服务地址：</string>
+    <string name="order_discount_coupon">优&#x0020;&#x0020;惠&#x0020;&#x0020;券：</string>
+    <string name="not_use">未使用</string>
+<string name="actually_pay_account">实付金额：</string>
+    <string name="payment_method">支付方式</string>
+    <string name="ali_pay_payment">支付宝支付</string>
+    <string name="we_chat_payment">微信支付</string>
+    <string name="payment">去支付</string>
+<string name="order_detail">订单详情</string>
+    <string name="total">总计</string>
+    <string name="discount">优惠</string>
+    <string name="actual_payment">实付</string>
+    <string name="service_information">服务信息</string>
+    <string name="order_information">订单信息</string>
+    <string name="order_number">订单号码：</string>
+    <string name="order_time">订单时间：</string>
+    <string name="complain_advice">投诉建议</string>
+    <string name="discount_price">￥0</string>
 
 
 </resources>

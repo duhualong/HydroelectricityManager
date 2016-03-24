@@ -115,4 +115,44 @@
     <item name="anniversaryService" type="id"/>
     <item name="hydroelectricityService" type="id"/>
 
+    <item name="vPagerReservation" type="id"/>
+    <item name="lineHyd" type="id"/>
+    <item name="lineFea" type="id"/>
+    <item name="lineAnn" type="id"/>
+    <item name="bannerReservation" type="id"/>
+    <item name="selectedProject" type="id"/>
+    <item name="etDescriptionProblem" type="id"/>
+    <item name="uploadPhoto" type="id"/>
+    <item name="imgUpload" type="id"/>
+    <item name="serviceTime" type="id"/>
+    <item name="serviceAddress" type="id"/>
+    <item name="backServiceTime" type="id"/>
+    <item name="backServiceAddress" type="id"/>
+    <item name="selectedServiceTime" type="id"/>
+    <item name="selectedServiceAddress" type="id"/>
+    <item name="titleRequirement" type="id"/>
+    <item name="pubRequirePrice" type="id"/>
+    <item name="immediatePay" type="id"/>
+    <item name="orderAddress" type="id"/>
+    <item name="orderPhone" type="id"/>
+    <item name="discountCouponAmount" type="id"/>
+    <item name="orderActualPay" type="id"/>
+    <item name="backBlackRight" type="id"/>
+    <item name="aliPayment" type="id"/>
+    <item name="weChatPayment" type="id"/>
+    <item name="orderPayment" type="id"/>
+    <item name="telephone" type="id"/>
+    <item name="discountPrice" type="id"/>
+    <item name="total" type="id"/>
+    <item name="discount" type="id"/>
+    <item name="discountCouponPrice" type="id"/>
+    <item name="serviceName" type="id"/>
+    <item name="servicePhoto" type="id"/>
+    <item name="selectedServiceName" type="id"/>
+    <item name="orderNumber" type="id"/>
+    <item name="orderTime" type="id"/>
+    <item name="paymentMethod" type="id"/>
+    <item name="complainAdvice" type="id"/>
+
+
 </resources>
