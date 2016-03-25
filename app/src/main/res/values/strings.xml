@@ -147,6 +147,41 @@
     <string name="order_time">订单时间：</string>
     <string name="complain_advice">投诉建议</string>
     <string name="discount_price">￥0</string>
-
-
+    <string name="maintain_type">维修类型</string>
+    <string name="select_service_type">请选择服务类型</string>
+    <string name="select_service_time">请选择服务时间</string>
+    <string name="order_evaluated">已评价</string>
+    <string name="order_commit">订单已提交</string>
+    <string name="order_commit_remark">请耐心等待水电工接单</string>
+    <string name="order_payment">支付成功</string>
+    <string name="order_receive">水电工已接单</string>
+    <string name="order_receive_remark">水电工稍后会与您联系</string>
+    <string name="material_cost_payment">材料费支付成功</string>
+    <string name="order_maintain">已维修</string>
+    <string name="order_maintain_remark">请确认服务情况</string>
+    <string name="order_finished">交易完成</string>
+    <string name="order_time_item">02&#8211;02&#x0020;&#x0020;11:22</string>
+    <string name="remark_content_order">管家电话:</string>
+    <string name="maintain_phone">18817772486</string>
+    <string name="waite_receive_order">等待接单</string>
+    <string name="five_minute">05:00</string>
+    <string name="contact_customer_service">5分钟未接单，请联系客服中心处理</string>
+    <string name="cancel_order">取消订单</string>
+    <string name="family_type">家庭版</string>
+    <string name="business">商用版</string>
+    <string name="staff_name">水电工</string>
+    <string name="five_star">五星</string>
+    <string name="distance_staff">6.9km</string>
+    <string name="take_order_times">接单1199次</string>
+    <string name="filter">筛选</string>
+    <string name="service_list">服务列表</string>
+    <string name="professional_title">职称</string>
+    <string name="potter_star">匠星</string>
+    <string name="gender">性别</string>
+    <string name="unlimited">不限</string>
+    <string name="clear">清空</string>
+    <string name="certain">确定</string>
+    <string name="primary_staff">初级水电管家</string>
+    <string name="intermediate_staff">中级水电管家</string>
+    <string name="pentagram_staff">五星水电管家</string>
 </resources>

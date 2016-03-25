@@ -289,6 +289,8 @@
                     android:layout_alignBottom="@id/serviceAddress"
                     style="@style/text_nor_gray"/>
             </RelativeLayout>
+            <View
+                style="@style/divider"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:background="@color/white"
@@ -322,9 +324,8 @@
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/margin_button_distance"
             android:text="@string/complain_advice"
-            android:textColor="@color/white"
             style="@style/text_nor"
-            android:background="@drawable/button_gray" />
+            android:background="@drawable/button_orange" />
     </LinearLayout>
 </ScrollView>
 

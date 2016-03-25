@@ -5,8 +5,11 @@
     <dimen name="divider">0.1dp</dimen>
     <dimen name="divider_lager">5dp</dimen>
     <dimen name="height_edit_text">45dp</dimen>
+    <dimen name="height_line_layout">45dp</dimen>
     <dimen name="height_distance">30dp</dimen>
     <dimen name="margin_distance">10dp</dimen>
+    <dimen name="margin_bottom">5dp</dimen>
+    <dimen name="margin_top">5dp</dimen>
     <dimen name="left_distance">10dp</dimen>
     <dimen name="middle_left_distance">15dp</dimen>
     <dimen name="large_left_distance">30dp</dimen>
@@ -22,6 +25,8 @@
     <dimen name="middle_top_distance">15dp</dimen>
     <dimen name="middle_top_distance_large">20dp</dimen>
     <dimen name="liner_layout_height">80dp</dimen>
+    <dimen name="liner_layout_width">80dp</dimen>
+
     <dimen name="liner_layout_height_large">100dp</dimen>
     <dimen name="my_content_height">60dp</dimen>
     <dimen name="item_height">150dp</dimen>
@@ -50,7 +55,12 @@
     <dimen name="button_width_large">90dp</dimen>
     <dimen name="button_height_small">32dp</dimen>
 
+    <dimen name="star_height">22dp</dimen>
+    <dimen name="star_width">50dp</dimen>
+    <dimen name="star_top_distance">28dp</dimen>
 
+    <dimen name="grid_view">10dp</dimen>
+<dimen name="image_size">176dp</dimen>
     <dimen name="line_spacing">3dp</dimen>
     <dimen name="line_width">75dp</dimen>
     <dimen name="line_height">2dp</dimen>

@@ -153,6 +153,46 @@
     <item name="orderTime" type="id"/>
     <item name="paymentMethod" type="id"/>
     <item name="complainAdvice" type="id"/>
+    <item name="maintainType" type="id"/>
+    <item name="selectedMaintainType" type="id"/>
+    <item name="listOrderStatus" type="id"/>
+    <item name="orderImage" type="id"/>
+    <item name="lineUp" type="id"/>
+    <item name="lineDown" type="id"/>
+    <item name="itemOrderContent" type="id"/>
+    <item name="itemOrderTime" type="id"/>
+    <item name="maintainTypeTitle" type="id"/>
+    <item name="btOrderDetail" type="id"/>
+    <item name="remarkOrderContent" type="id"/>
+    <item name="maintainerPhone" type="id"/>
+    <item name="waiteOrder" type="id"/>
+    <item name="contactCusSer" type="id"/>
+    <item name="cancelOrder" type="id"/>
+    <item name="orderPaymentTime" type="id"/>
+    <item name="selectUsage" type="id"/>
+    <item name="businessType" type="id"/>
+    <item name="familyType" type="id"/>
+    <item name="gridView" type="id"/>
+    <item name="itemImage" type="id"/>
+    <item name="staffName" type="id"/>
+    <item name="starRank" type="id"/>
+    <item name="starImage" type="id"/>
+    <item name="takeOrderTimes" type="id"/>
+    <item name="projectListService" type="id"/>
+    <item name="staffListService" type="id"/>
+    <item name="project" type="id"/>
+    <item name="staff" type="id"/>
+    <item name="vPagerListService" type="id"/>
+    <item name="falseFilter" type="id"/>
+    <item name="vPagerFilter" type="id"/>
+    <item name="viewProfessional" type="id"/>
+    <item name="professionalTitle" type="id"/>
+    <item name="potterStar" type="id"/>
+    <item name="viewPotter" type="id"/>
+    <item name="viewGender" type="id"/>
+    <item name="gender" type="id"/>
+    <item name="clearFilter" type="id"/>
+    <item name="rlCertain" type="id"/>
 
 
 </resources>

@@ -5,6 +5,6 @@
     android:background="@color/gray_light">
    <include layout="@layout/order_confirm_title"/>
 
-    <include layout="@layout/order_confirm_content"/>
+    <include layout="@layout/order_confirm_content_publication_requirement"/>
 
 </RelativeLayout>

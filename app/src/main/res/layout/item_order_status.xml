@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_middle"
+    android:layout_height="wrap_content">
+<ImageView
+    android:id="@id/orderImage"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/middle_left_distance"
+    android:layout_marginStart="@dimen/middle_left_distance"
+    android:layout_below="@id/lineUp"
+    android:layout_marginTop="@dimen/smaller_top_distance"
+    android:layout_marginBottom="@dimen/smaller_top_distance"
+    android:src="@drawable/ic_order_commit"/>
+    <View
+        android:id="@id/lineUp"
+       style="@style/divider_vertical_red"
+        android:layout_marginLeft="@dimen/large_left_distance"
+        android:layout_marginStart="@dimen/large_left_distance" />
+    <View
+        android:id="@id/lineDown"
+        style="@style/divider_vertical_red"
+        android:layout_below="@id/orderImage"
+        android:layout_marginLeft="@dimen/large_left_distance"
+        android:layout_marginStart="@dimen/large_left_distance" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toEndOf="@id/orderImage"
+        android:layout_toRightOf="@id/orderImage"
+        android:layout_marginStart="@dimen/left_distance"
+        android:layout_marginLeft="@dimen/left_distance"
+        android:layout_marginEnd="@dimen/right_distance_large"
+        android:layout_marginRight="@dimen/right_distance_large"
+        android:layout_marginTop="@dimen/middle_top_distance"
+        android:background="@drawable/order_background">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/large_left_distance"
+            android:layout_marginStart="@dimen/large_left_distance"
+            android:orientation="vertical"
+
+            >
+        <TextView
+            android:id="@id/itemOrderContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_nor"
+            android:text="@string/order_evaluated"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <TextView
+            android:id="@id/remarkOrderContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_small"
+            android:visibility="gone"
+            android:text="@string/remark_content_order"/>
+                <TextView
+                    android:id="@id/maintainerPhone"
+                    android:visibility="gone"
+                    style="@style/text_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maintain_phone"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@id/itemOrderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/order_time_item"
+            style="@style/text_nor_gray"
+            android:layout_marginEnd="@dimen/right_distance"
+            android:layout_marginRight="@dimen/right_distance"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
