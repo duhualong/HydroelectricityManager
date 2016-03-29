@@ -184,4 +184,6 @@
     <string name="primary_staff">初级水电管家</string>
     <string name="intermediate_staff">中级水电管家</string>
     <string name="pentagram_staff">五星水电管家</string>
+    <string name="buy_number">已有880人购买</string>
+    <string name="combo_list">套餐列表</string>
 </resources>

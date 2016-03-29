@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <include
-        android:id="@id/homeTitle"
-        layout="@layout/home_title"/>
-    <ScrollView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/homeTitle">
+        android:layout_height="match_parent"
+    android:fillViewport="true">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
+        <include
+            android:id="@id/homeTitle"
+            layout="@layout/home_title"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="@dimen/banner_height"
@@ -45,7 +40,7 @@
                     android:text="@string/hydroelectric_manager"/>
             </LinearLayout>
             <View
-               style="@style/divider_vertical_larger"/>
+               style="@style/divider_vertical_bigger"/>
             <LinearLayout
                 android:id="@id/featureManager"
                 android:layout_width="0dp"
@@ -92,7 +87,7 @@
                     android:text="@string/store_manager"/>
             </LinearLayout>
             <View
-                style="@style/divider_vertical_larger"/>
+                style="@style/divider_vertical_bigger"/>
             <LinearLayout
                 android:id="@id/anniversaryManager"
                 android:layout_width="0dp"
@@ -117,6 +112,3 @@
             style="@style/divider_large"/>
     </LinearLayout>
     </ScrollView>
-<include layout="@layout/home_activity_bottom"/>
-
-</RelativeLayout>

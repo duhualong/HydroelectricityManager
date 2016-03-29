@@ -33,6 +33,7 @@
     <item name="commitLogin" type="id" />
 
     <!-- home-->
+    <item name="fragmentContainer" type="id"/>
     <item name="tvLocation" type="id" />
     <item name="dropdownList" type="id" />
     <item name="scan" type="id" />
@@ -193,6 +194,9 @@
     <item name="gender" type="id"/>
     <item name="clearFilter" type="id"/>
     <item name="rlCertain" type="id"/>
+    <item name="comboBuyNumb" type="id"/>
+    <item name="listCombo" type="id"/>
+    <item name="viewPageMain" type="id"/>
 
 
 </resources>
