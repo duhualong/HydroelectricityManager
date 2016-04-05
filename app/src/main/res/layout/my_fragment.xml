@@ -15,7 +15,7 @@
             android:layout_height="@dimen/banner_height"
             android:background="@drawable/ic_my_top_background">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@id/headPortrait"
                 android:layout_width="@dimen/head_image_size"
                 android:layout_height="@dimen/head_image_size"

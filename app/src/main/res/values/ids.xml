@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- login-->
+    <item name="splash" type="id" />
+    <item name="iv_logo_head_photo" type="id" />
+    <item name="tv_name_dialog" type="id" />
+    <item name="timer" type="id" />
+    <item name="loginContainer" type="id" />
     <item name="backLeftWhite" type="id" />
     <item name="inputPhoneNumber" type="id" />
-    <item name="inputPassword" type="id" />
+    <item name="inputVar" type="id" />
     <item name="ivPhoneNumber" type="id" />
     <item name="ivPassword" type="id" />
     <item name="checkSwitch" type="id" />
     <item name="btLogin" type="id" />
     <item name="forgetPassword" type="id" />
     <item name="tvLoginAgree" type="id" />
-    <item name="ThirdPartyLogin" type="id" />
+    <item name="thirdPartyLogin" type="id" />
+    <item name="thirdLoginNext" type="id" />
     <!-- phone_verification_login-->
     <item name="obtainVerifyCode" type="id" />
     <item name="accountPsdLogin" type="id" />
@@ -19,6 +25,7 @@
     <item name="ivWeChat" type="id" />
 
     <!-- register-->
+    <item name="register" type="id" />
     <item name="inputPhone" type="id" />
     <item name="setPassword" type="id" />
     <item name="etInputPhone" type="id" />
@@ -33,6 +40,11 @@
     <item name="commitLogin" type="id" />
 
     <!-- home-->
+    <item name="tabDemand" type="id"/>
+    <item name="serviceContainer" type="id"/>
+    <item name="textView" type="id"/>
+    <item name="listStaff" type="id"/>
+
     <item name="fragmentContainer" type="id"/>
     <item name="tvLocation" type="id" />
     <item name="dropdownList" type="id" />
@@ -51,9 +63,31 @@
     <item name="tvPosition" type="id" />
 
     <!-- my-->
+    <item name="accountName" type="id"/>
+    <item name="accountPhone" type="id"/>
     <item name="headPortrait" type="id" />
+    <item name="accountMoney" type="id" />
     <item name="name" type="id" />
     <item name="phone" type="id" />
+    <item name="withdraw" type="id" />
+    <item name="listWithdraw" type="id" />
+    <item name="withdrawStatus" type="id" />
+    <item name="applyDate" type="id" />
+    <item name="withdrawMoney" type="id" />
+    <item name="auditStatus" type="id" />
+    <item name="aliPay" type="id" />
+    <item name="aliPayAccount" type="id" />
+    <item name="lowWithdraw" type="id" />
+    <item name="limit" type="id" />
+    <item name="mostMoney" type="id" />
+    <item name="commitApply" type="id" />
+
+    <!-- map-->
+    <item name="map" type="id"/>
+
+
+
+
     <item name="alterNews" type="id" />
     <item name="myHead" type="id" />
     <item name="accountBalance" type="id" />
@@ -107,6 +141,12 @@
     <item name="btEvaluation" type="id" />
 
 <!--reservation 立即预约-->
+
+    <item name="distance" type="id"/>
+    <item name="filter" type="id"/>
+    <item name="rightMenu" type="id"/>
+    <item name="tabFilter" type="id"/>
+
     <item name="electricityLightPath" type="id"/>
     <item name="faucetFitting" type="id"/>
     <item name="bathroomSanitary" type="id"/>
@@ -197,6 +237,14 @@
     <item name="comboBuyNumb" type="id"/>
     <item name="listCombo" type="id"/>
     <item name="viewPageMain" type="id"/>
+
+
+
+
+    <item name="tabReservation" type="id"/>
+    <item name="reservationContainer" type="id"/>
+
+
 
 
 </resources>

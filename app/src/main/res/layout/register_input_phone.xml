@@ -15,15 +15,17 @@
         android:paddingLeft="@dimen/padding_distance"
         android:paddingStart="@dimen/padding_distance"
         android:paddingEnd="@dimen/padding_distance"
+        android:textCursorDrawable="@color/colorPrimaryDark"
         android:paddingRight="@dimen/padding_distance"
         android:inputType="phone"
+        android:maxLength="11"
         android:background="@drawable/edit_no_input"/>
     <Button
         android:id="@id/getVerification"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_height"
         android:layout_margin="@dimen/margin_button_distance"
-        android:text="@string/getVerification"
+        android:text="@string/next"
         android:textColor="@color/white"
         style="@style/text_nor"
         android:background="@drawable/button_gray" />

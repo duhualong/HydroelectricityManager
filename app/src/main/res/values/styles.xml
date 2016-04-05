@@ -2,10 +2,11 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:actionBarStyle">@style/actionbar_style</item>
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/green_light</item>
     </style>
     <style name="divider">
         <item name="android:layout_width">match_parent</item>
@@ -84,5 +85,32 @@
     <style name="text_large">
         <item name="android:textSize">20sp</item>
     </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyCustomTabText</item>
+        <item name="tabSelectedTextColor">@color/green</item>
+    </style>
 
+    <style name="MyCustomTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ServiceDemandTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/ServiceDemandTabText</item>
+        <item name="tabSelectedTextColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="ServiceDemandTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+    <style name="actionbar_style" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#218FCC</item>
+        <item name="android:actionBarSize">150dip</item>
+        <item name="android:icon">@android:color/transparent</item>
+        <item name="android:itemPadding">20dip</item>
+
+    </style>
 </resources>

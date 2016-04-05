@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="divider">0.1dp</dimen>
+    <dimen name="divider_bottom">1dp</dimen>
     <dimen name="divider_lager">5dp</dimen>
     <dimen name="height_edit_text">45dp</dimen>
     <dimen name="height_line_layout">45dp</dimen>

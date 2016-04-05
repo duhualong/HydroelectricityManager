@@ -70,7 +70,7 @@
                 android:layout_marginStart="@dimen/left_distance"
                 android:src="@drawable/ic_password"/>
             <EditText
-                android:id="@id/inputPassword"
+                android:id="@id/inputVar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@null"
@@ -120,7 +120,7 @@
     <include layout="@layout/third_party_login_bottom"
         />
     <ImageView
-        android:id="@id/ThirdPartyLogin"
+        android:id="@id/thirdPartyLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
