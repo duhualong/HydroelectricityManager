@@ -1,5 +1,7 @@
 package dhl.com.hydroelectricitymanager.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -43,6 +45,10 @@ public class RegisterPhoneFragment extends BaseFragment{
             case R.id.getVerification:
 
                 if (isPhone(phone)){
+                    SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("phone", phone);
+                    editor.apply();
                     fragmentMgr.beginTransaction()
                             .addToBackStack("")
                             .replace(R.id.loginContainer, new RegisterVerFragment())

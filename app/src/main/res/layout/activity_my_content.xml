@@ -93,7 +93,7 @@
     </RelativeLayout>
     <View style="@style/divider"/>
     <RelativeLayout
-        android:id="@id/myReservation"
+        android:id="@id/myAddress"
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_height="@dimen/my_content_height">

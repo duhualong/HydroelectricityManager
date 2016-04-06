@@ -38,11 +38,18 @@ public class RegisterPwdFragment extends BaseFragment {
     @Bind(R.id.commitLogin)
     Button commitLogin;
 
-    @OnClick({R.id.backLeftWhite})
+    @OnClick({R.id.backLeftWhite,R.id.commitLogin})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.backLeftWhite:
                 onBackPressed();
+                break;
+            case R.id.commitLogin:
+                String pwd=etSetPwd.getText().toString().trim();
+                if (pwd.length()>=6&&pwd.length()<20){
+
+                }else {
+                }
                 break;
         }
     }
@@ -73,6 +80,7 @@ public class RegisterPwdFragment extends BaseFragment {
         });
         switchChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             String pwd=etSetPwd.getText().toString().trim();
+
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {

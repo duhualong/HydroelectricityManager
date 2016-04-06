@@ -63,6 +63,8 @@
     <item name="tvPosition" type="id" />
 
     <!-- my-->
+    <item name="nameDialog" type="id"/>
+    <item name="etNameDialog" type="id"/>
     <item name="accountName" type="id"/>
     <item name="accountPhone" type="id"/>
     <item name="headPortrait" type="id" />
@@ -81,6 +83,7 @@
     <item name="limit" type="id" />
     <item name="mostMoney" type="id" />
     <item name="commitApply" type="id" />
+    <item name="myAddress" type="id" />
 
     <!-- map-->
     <item name="map" type="id"/>

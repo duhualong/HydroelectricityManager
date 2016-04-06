@@ -23,17 +23,16 @@
         android:gravity="center"
         style="@style/text_large"
         android:layout_centerInParent="true"
-        android:textColor="@color/white"
+        android:textColor="#fff"
         android:text="@string/hydroelectric_manager" />
     </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/text_nor"
+       style="@style/text_nor"
         android:layout_marginStart="@dimen/right_distance_middle"
         android:layout_marginLeft="@dimen/right_distance_middle"
         android:layout_marginTop="@dimen/small_top_distance"
-        android:text="@string/upload_photo_tv"/>
-
+        android:text="@string/tel_phone"/>
 
 </LinearLayout>

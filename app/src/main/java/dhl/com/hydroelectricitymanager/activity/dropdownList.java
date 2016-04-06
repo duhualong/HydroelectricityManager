@@ -123,7 +123,7 @@ public class DropdownList extends Activity implements LocationSource,AMapLocatio
     @Override
     public void onLocationChanged(AMapLocation amapLocation) {
         if (mListener != null && amapLocation != null) {
-            if (amapLocation != null&& amapLocation.getErrorCode() == 0) {
+            if(amapLocation.getErrorCode() == 0) {
                 mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
             } else {
                 String errText = "定位失败," + amapLocation.getErrorCode()+ ": " + amapLocation.getErrorInfo();
