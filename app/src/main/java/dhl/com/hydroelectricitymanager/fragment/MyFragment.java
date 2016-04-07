@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import dhl.com.hydroelectricitymanager.R;
+import dhl.com.hydroelectricitymanager.activity.MyReservation;
 import dhl.com.hydroelectricitymanager.util.PhotoUtil;
 
 /**
@@ -72,6 +73,7 @@ public class MyFragment extends Fragment {
                 break;
 
             case R.id.myReservation:
+                startActivity(new Intent(getActivity(),MyReservation.class));
                 break;
             case R.id.lifeService:
 

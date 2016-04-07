@@ -100,7 +100,7 @@ public class ContainerActivity extends AppCompatActivity implements ViewPager.On
             reservation.setTextColor(ContextCompat.getColor(context, navSelColorId[1]));
             reservation.setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(context,navSelDrawableId[1]), null, null);
         }else if (position==2){
-            my.setTextColor(ContextCompat.getColor(context, navSelColorId[0]));
+            my.setTextColor(ContextCompat.getColor(context, navSelColorId[1]));
             my.setCompoundDrawablesWithIntrinsicBounds(null, ContextCompat.getDrawable(context,navSelDrawableId[2]), null, null);
         }
 

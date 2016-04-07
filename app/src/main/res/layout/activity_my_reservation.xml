@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:background="@drawable/color_gradient_theme">
+
         <ImageView
             android:id="@id/backLeftWhite"
             android:layout_width="wrap_content"
@@ -31,12 +32,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/edit"
+            android:visibility="gone"
             android:layout_centerVertical="true"
             android:textColor="@color/white"
             style="@style/text_big"
             android:padding="@dimen/text_padding"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/noReservation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:gravity="center">
+        <ImageView
+            android:id="@id/imgService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_service_no"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/text_nor"
+            android:layout_marginTop="@dimen/small_top_distance"
+            android:layout_below="@id/imgService"
+            android:text="@string/no_reservation"/>
     </RelativeLayout>
     <ListView
         android:id="@id/listMyReservation"

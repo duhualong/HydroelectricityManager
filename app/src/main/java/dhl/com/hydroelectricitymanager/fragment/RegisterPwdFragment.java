@@ -1,17 +1,15 @@
 package dhl.com.hydroelectricitymanager.fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v4.content.ContextCompat;
-import android.text.Selection;
-import android.text.Spannable;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -47,8 +45,17 @@ public class RegisterPwdFragment extends BaseFragment {
             case R.id.commitLogin:
                 String pwd=etSetPwd.getText().toString().trim();
                 if (pwd.length()>=6&&pwd.length()<20){
-
+                    SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                    editor.putString("pwd",pwd);
+                    editor.apply();
+                    fragmentMgr.beginTransaction()
+                            .addToBackStack("")
+                            .replace(R.id.loginContainer, new LoginFragment())
+                            .commit();
                 }else {
+                    Toast.makeText(context,"设置的密码格式不正确",Toast.LENGTH_SHORT).show();
+
                 }
                 break;
         }
@@ -62,51 +69,15 @@ public class RegisterPwdFragment extends BaseFragment {
     protected void updateUI() {
         tvPhone.setTextColor(ContextCompat.getColor(context, R.color.gray));
         setPassword.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-        etSetPwd.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    etSetPwd.setBackgroundResource(R.drawable.edit_input);
-                }
-            }
-        });
-        invitationCode.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    invitationCode.setBackgroundResource(R.drawable.edit_input);
-                }
-            }
-        });
-        switchChecked.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            String pwd=etSetPwd.getText().toString().trim();
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    //如果选中，显示密码
-                        etSetPwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-
-                }else {
-                    //否则隐藏密码
-                        etSetPwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
-
-
-                }
-                isChecked=!isChecked;
-                etSetPwd.postInvalidate();
-                //切换后将EditText光标置于末尾
-                CharSequence charSequence = etSetPwd.getText();
-                if (charSequence!=null) {
-                    Spannable spanText = (Spannable) charSequence;
-                    Selection.setSelection(spanText, charSequence.length());
-                }
-            }
-        });
+       setFocusChangeListeners(etSetPwd);
+        setFocusChangeListeners(invitationCode);
+        onCheckedChangeListeners(etSetPwd, switchChecked);
+        pwdAddTextChangedListeners(etSetPwd,commitLogin);
     }
         @Override
     public void onDestroyView() {
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
+
 }

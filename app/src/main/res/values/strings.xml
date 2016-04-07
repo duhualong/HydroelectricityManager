@@ -50,6 +50,11 @@
     <string name="tv_location">定位到当前位置</string>
 
     <!-- my-->
+
+    <!-- reservation-->
+    <string name="no_reservation">空空如也，暂时没有预约</string>
+
+
     <string name="edit_name">编辑姓名</string>
     <string name="hint_edit_name">请编辑姓名</string>
     <string name="name_tv">姓名：</string>

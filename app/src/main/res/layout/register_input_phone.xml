@@ -15,7 +15,6 @@
         android:paddingLeft="@dimen/padding_distance"
         android:paddingStart="@dimen/padding_distance"
         android:paddingEnd="@dimen/padding_distance"
-        android:textCursorDrawable="@color/colorPrimaryDark"
         android:paddingRight="@dimen/padding_distance"
         android:inputType="phone"
         android:maxLength="11"

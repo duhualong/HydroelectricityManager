@@ -16,19 +16,31 @@
         android:drawableEnd="@drawable/ic_black_right"
         android:gravity="center"
         />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true">
     <TextView
         android:id="@id/itemReservationEvaluation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         style="@style/text_big"
         android:textColor="@color/black"
         android:padding="@dimen/small_padding_drawable"
-        android:layout_marginEnd="@dimen/right_distance"
-        android:layout_marginRight="@dimen/right_distance"
         android:text="@string/my_reservation_evaluation"
-        android:layout_alignBottom="@id/maintenanceProjects"/>
+        android:layout_toLeftOf="@id/rubbish"
+        android:layout_toStartOf="@id/rubbish"
+       />
+    <ImageView
+        android:id="@id/rubbish"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_rubbish"/>
+    </RelativeLayout>
     <View
         android:id="@id/itemLine"
        android:layout_below="@id/maintenanceProjects"

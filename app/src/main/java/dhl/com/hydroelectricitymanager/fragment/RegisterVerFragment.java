@@ -1,9 +1,7 @@
 package dhl.com.hydroelectricitymanager.fragment;
 
 import android.support.v4.content.ContextCompat;
-import android.text.Editable;
 import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,7 +42,6 @@ public class RegisterVerFragment extends BaseFragment {
                 if (!TextUtils.isEmpty(var)){
                     fragmentMgr.beginTransaction().addToBackStack("").replace(R.id.loginContainer, new RegisterPwdFragment()).commit();
                 }
-
                 break;
 
 
@@ -65,41 +62,11 @@ public class RegisterVerFragment extends BaseFragment {
         timer.setVisibility(View.VISIBLE);
         tvPhone.setTextColor(ContextCompat.getColor(context, R.color.gray));
         tvVar.setTextColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
-        etVar.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    etVar.setBackgroundResource(R.drawable.edit_input);
-                }
-            }
-        });
-
-        etVar.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-              String var=s.toString().trim();
-                if (!TextUtils.isEmpty(var)){
-                    commitVar.setBackgroundResource(R.drawable.button_orange);
-                }else {
-                    commitVar.setBackgroundResource(R.drawable.button_gray);
-                }
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
+       setFocusChangeListeners(etVar);
+        addTextChangedListeners(etVar, commitVar);
 
     }
+
 //    class TimeCount extends CountDownTimer {
 //        public TimeCount(long millisInFuture, long countDownInterval) {
 //            super(millisInFuture, countDownInterval);

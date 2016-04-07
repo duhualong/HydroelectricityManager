@@ -53,6 +53,8 @@
         <activity android:name=".activity.ServiceDemandActivityText"/>
         <activity android:name=".activity.FilterContainer"/>
         <activity android:name=".activity.LoginActivity"/>
+        <!-- 我的预约-->
+        <activity android:name=".activity.MyReservation"/>
 
 
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->

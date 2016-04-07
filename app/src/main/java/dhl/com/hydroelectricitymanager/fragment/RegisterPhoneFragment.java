@@ -2,9 +2,6 @@ package dhl.com.hydroelectricitymanager.fragment;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.text.Editable;
-import android.text.TextUtils;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,10 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dhl.com.hydroelectricitymanager.R;
 
@@ -72,54 +67,12 @@ public class RegisterPhoneFragment extends BaseFragment{
 
     @Override
     protected void updateUI() {
-        etInputPhone.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (hasFocus) {
-                    etInputPhone.setBackgroundResource(R.drawable.edit_input);
-                }
-            }
-        });
-        etInputPhone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(isPhone(s.toString())){
-                    getVerification.setBackgroundResource(R.drawable.button_orange);
-
-
-                }else {
-                    getVerification.setBackgroundResource(R.drawable.button_gray);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-
+      setFocusChangeListeners(etInputPhone);
+       phoneAddTextChangedListeners(etInputPhone,getVerification);
     }
-    /**
-     * 手机号格式是否正确
-     * @param phone 手机号码
-     * @return 手机正确返回true
-     */
-    public static boolean isPhone(String phone) {
-        if (TextUtils.isEmpty(phone)) {
-            return false;
-        }
-        String expression = "^[1]([3-9][0-9]{1}|59|58|88|89)[0-9]{8}$";
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher(phone);
-        return matcher.matches();
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
-
-
 }

@@ -63,6 +63,12 @@
     <item name="tvPosition" type="id" />
 
     <!-- my-->
+    <!-- reservation-->
+    <item name="noReservation" type="id"/>
+    <item name="imgService" type="id"/>
+    <item name="rubbish" type="id"/>
+
+
     <item name="nameDialog" type="id"/>
     <item name="etNameDialog" type="id"/>
     <item name="accountName" type="id"/>
