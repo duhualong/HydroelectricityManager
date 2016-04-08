@@ -53,7 +53,8 @@
 
     <!-- reservation-->
     <string name="no_reservation">空空如也，暂时没有预约</string>
-
+<!--service-->
+    <string name="no_service">空空如也，暂时没有服务</string>
 
     <string name="edit_name">编辑姓名</string>
     <string name="hint_edit_name">请编辑姓名</string>

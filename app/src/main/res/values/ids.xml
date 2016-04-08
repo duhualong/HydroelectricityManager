@@ -65,8 +65,14 @@
     <!-- my-->
     <!-- reservation-->
     <item name="noReservation" type="id"/>
-    <item name="imgService" type="id"/>
+    <item name="imgReservation" type="id"/>
     <item name="rubbish" type="id"/>
+    <!-- service-->
+    <item name="imgService" type="id"/>
+    <item name="noService" type="id"/>
+
+    <!-- service_address-->
+    <item name="addAddress" type="id"/>
 
 
     <item name="nameDialog" type="id"/>

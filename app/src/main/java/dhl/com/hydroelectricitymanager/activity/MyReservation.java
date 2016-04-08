@@ -23,7 +23,7 @@ public class MyReservation extends BaseActivity {
  //   private List<Stupid> list;
     @Bind(R.id.listMyReservation)
     ListView listMyReservation;
-    @Bind(R.id.imgService)
+    @Bind(R.id.imgReservation)
     ImageView imgService;
     @Bind(R.id.myReservationEdit)
     TextView edit;
@@ -31,7 +31,7 @@ public class MyReservation extends BaseActivity {
     ImageView backLeft;
     @Bind(R.id.noReservation)
     RelativeLayout noReservation;
-    @OnClick({R.id.backLeftWhite,R.id.imgService, R.id.myReservationEdit})
+    @OnClick({R.id.backLeftWhite,R.id.imgReservation, R.id.myReservationEdit})
     public void onClick(View view){
         switch (view.getId()){
 //            case R.id.myReservationEdit:
@@ -42,10 +42,13 @@ public class MyReservation extends BaseActivity {
 //                }
 //                reservationAdapter.notifyDataSetChanged();
   //              break;
+            case R.id.myReservationEdit:
+
+                break;
             case R.id.backLeftWhite:
             onBackPressed();
             break;
-            case R.id.imgService:
+            case R.id.imgReservation:
                 edit.setVisibility(View.VISIBLE);
                 noReservation.setVisibility(View.GONE);
            //     reservationAdapter=new ReservationAdapter(new ArrayList<Stupid>());

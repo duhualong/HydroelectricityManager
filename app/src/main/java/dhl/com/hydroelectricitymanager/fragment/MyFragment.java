@@ -27,6 +27,8 @@ import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import dhl.com.hydroelectricitymanager.R;
 import dhl.com.hydroelectricitymanager.activity.MyReservation;
+import dhl.com.hydroelectricitymanager.activity.MyService;
+import dhl.com.hydroelectricitymanager.activity.ServiceAddress;
 import dhl.com.hydroelectricitymanager.util.PhotoUtil;
 
 /**
@@ -79,9 +81,11 @@ public class MyFragment extends Fragment {
 
                 break;
             case R.id.myAddress:
+                startActivity(new Intent(getActivity(), ServiceAddress.class));
 
                 break;
             case R.id.myService:
+                startActivity(new Intent(getActivity(),MyService.class));
 
                 break;
             case R.id.customerHotLine:

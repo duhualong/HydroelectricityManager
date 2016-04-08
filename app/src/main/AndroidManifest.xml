@@ -55,6 +55,12 @@
         <activity android:name=".activity.LoginActivity"/>
         <!-- 我的预约-->
         <activity android:name=".activity.MyReservation"/>
+        <!-- 我的服务-->
+        <activity android:name=".activity.MyService"/>
+        <!-- 服务地址-->
+        <activity android:name=".activity.ServiceAddress"/>
+        <!-- addAddress-->
+        <activity android:name=".activity.AddAddressActivity"/>
 
 
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->

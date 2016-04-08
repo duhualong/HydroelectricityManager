@@ -24,6 +24,28 @@
             android:textColor="@color/white"
             style="@style/text_big"/>
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/noService"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:gravity="center">
+        <ImageView
+            android:id="@id/imgService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_no_service"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            style="@style/text_nor"
+            android:layout_marginTop="@dimen/small_top_distance"
+            android:layout_below="@id/imgService"
+            android:text="@string/no_service"/>
+    </RelativeLayout>
     <ListView
         android:id="@id/lvMyService"
         android:layout_width="match_parent"

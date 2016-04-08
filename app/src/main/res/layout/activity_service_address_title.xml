@@ -13,6 +13,7 @@
         android:layout_alignParentLeft="true"
         android:src="@drawable/ic_arrow_left_white"/>
     <TextView
+        android:id="@+id/addressTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/service_address"
@@ -22,6 +23,7 @@
         android:layout_toEndOf="@id/backLeftWhite"
         android:layout_toRightOf="@id/backLeftWhite"/>
     <TextView
+        android:id="@id/addAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
