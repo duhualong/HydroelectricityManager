@@ -38,6 +38,10 @@
     <item name="setLoginPassword" type="id" />
     <item name="invitationCode" type="id" />
     <item name="commitLogin" type="id" />
+    <!-- forget_pwd-->
+    <item name="btnVar" type="id"/>
+    <item name="btnNext" type="id"/>
+    <item name="btnCertain" type="id"/>
 
     <!-- home-->
     <item name="tabDemand" type="id"/>
@@ -63,6 +67,10 @@
     <item name="tvPosition" type="id" />
 
     <!-- my-->
+    <!-- coupon-->
+    <item name="tipCoupon" type="id"/>
+    <item name="noCoupon" type="id"/>
+    <item name="couponCode" type="id"/>
     <!-- reservation-->
     <item name="noReservation" type="id"/>
     <item name="imgReservation" type="id"/>

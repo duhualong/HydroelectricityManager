@@ -21,7 +21,7 @@ import dhl.com.hydroelectricitymanager.App;
  * 邮箱2383335125@qq.com
  */
 public class TimeButton extends Button implements View.OnClickListener{
-    private long lenght = 60 * 1000;// 倒计时长度,这里给了默认60秒
+    private long length = 60 * 1000;// 倒计时长度,这里给了默认60秒
     private String textafter = "秒后重新获取";
     private String textbefore = "点击获取验证码";
     private final String TIME = "time";
@@ -52,17 +52,16 @@ public class TimeButton extends Button implements View.OnClickListener{
             time -= 1000;
             if (time < 0) {
                 TimeButton.this.setEnabled(true);
-                TimeButton.this.setText(textbefore);
+                TimeButton.this.setText("重新获取验证码");
                 clearTimer();
             }
-        };
+        }
     };
 
     private void initTimer() {
-        time = lenght;
+        time = length;
         t = new Timer();
         tt = new TimerTask() {
-
             @Override
             public void run() {
                 Log.e("yung", time / 1000 + "");
@@ -152,12 +151,12 @@ public class TimeButton extends Button implements View.OnClickListener{
     /**
      * 设置到计时长度
      *
-     * @param lenght
+     * @param length
      *            时间 默认毫秒
      * @return
      */
-    public TimeButton setLenght(long lenght) {
-        this.lenght = lenght;
+    public TimeButton setLength(long length) {
+        this.length = length;
         return this;
     }
     /*

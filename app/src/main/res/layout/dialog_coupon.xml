@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="?android:actionBarSize">
+        <ImageView
+            android:id="@id/iv_logo_head_photo"
+            android:layout_width="@dimen/height_distance"
+            android:layout_height="@dimen/height_distance"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/button_width"
+            android:layout_marginLeft="@dimen/button_width"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:id="@id/tv_name_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            style="@style/text_large"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:text="@string/hydroelectric_manager" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@id/couponCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_distance"
+        android:hint="@string/exchange_code_discount_coupon"
+        style="@style/text_nor"
+        android:layout_marginTop="@dimen/middle_top_distance_large"
+        android:paddingLeft="@dimen/padding_distance"
+        android:paddingStart="@dimen/padding_distance"
+        android:paddingEnd="@dimen/padding_distance"
+        android:paddingRight="@dimen/padding_distance"
+        android:inputType="number"
+        android:background="@drawable/edit_input"/>
+</LinearLayout>

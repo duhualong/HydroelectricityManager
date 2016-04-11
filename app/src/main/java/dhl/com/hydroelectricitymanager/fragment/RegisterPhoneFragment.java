@@ -38,7 +38,6 @@ public class RegisterPhoneFragment extends BaseFragment{
                 onBackPressed();
                 break;
             case R.id.getVerification:
-
                 if (isPhone(phone)){
                     SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor=sharedPreferences.edit();

@@ -9,4 +9,7 @@ public class Constants {
     public static int HOMEFRAGMENT=0;
     public static int RESERVATIONFRAGMENT=1;
     public static int MYFRAGMENT=2;
+    public static int TOTALTIME=60000;
+    public static int PAUSETIME=1000;
+
 }

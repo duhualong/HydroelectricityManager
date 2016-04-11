@@ -37,10 +37,26 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@id/noCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/liner_layout_height"
+        android:layout_margin="@dimen/margin_distance"
+        android:background="@drawable/ic_discount_coupon_background"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/text_nor"
+            android:text="@string/no_coupon"/>
+        </RelativeLayout>
     <LinearLayout
+        android:id="@id/tipCoupon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_edit_text"
         android:background="@color/white"
+        android:visibility="gone"
         android:gravity="center"
        >
     <TextView
@@ -52,8 +68,10 @@
         android:drawablePadding="@dimen/padding_drawable"
         android:padding="@dimen/text_padding"
         android:text="@string/discount_coupon_use_state"/>
+
     </LinearLayout>
     <ListView
+        android:visibility="gone"
         android:id="@id/listDiscountCoupon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

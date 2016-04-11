@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             style="@style/text_nor"
             android:textColor="@color/gray"
-            android:text="@string/Agreeable"/>
+            android:text="@string/agreeable"/>
         <TextView
             android:id="@id/userContract"
             android:layout_width="wrap_content"

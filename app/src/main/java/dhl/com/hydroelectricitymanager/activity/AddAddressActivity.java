@@ -2,6 +2,7 @@ package dhl.com.hydroelectricitymanager.activity;
 
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -17,12 +18,18 @@ public class AddAddressActivity extends BaseActivity {
     ImageView backLeft;
     @Bind(R.id.finishedAddressEdit)
     ImageView finishedAddress;
+
     @OnClick({R.id.backLeftWhite,R.id.finishedAddressEdit})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.backLeftWhite:
                 onBackPressed();
                 break;
+            case R.id.finishedAddressEdit:
+                Toast.makeText(context,"地址编辑完成",Toast.LENGTH_LONG).show();
+                onBackPressed();
+                break;
+
 
         }
     }

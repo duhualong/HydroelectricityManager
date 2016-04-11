@@ -61,6 +61,8 @@
         <activity android:name=".activity.ServiceAddress"/>
         <!-- addAddress-->
         <activity android:name=".activity.AddAddressActivity"/>
+        <activity android:name=".activity.MyCoupon"/>
+
 
 
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->

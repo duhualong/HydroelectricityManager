@@ -14,8 +14,8 @@
     <string name="phone_create_account">未注册的手机将自动创建为水电管家账户</string>
     <string name="account_password_login">账号密码登录</string>
     <string name="verification_login">验证并登录</string>
-    <string name="QQ">QQ</string>
-    <string name="weChat">微信</string>
+    <string name="qq">QQ</string>
+    <string name="we_chat">微信</string>
     <!-- register-->
     <string name="register">注册</string>
     <string name="register_first">1输入手机号</string>
@@ -23,16 +23,23 @@
     <string name="register_third">3设置密码</string>
     <string name="hint_input_password_register">请输入您的手机号</string>
     <string name="next">下一步</string>
-    <string name="getVerification">获取验证码</string>
-    <string name="Agreeable">我已同意并接受</string>
+    <string name="get_verification">获取验证码</string>
+    <string name="agreeable">我已同意并接受</string>
     <string name="resend_verification">点击获取验证码</string>
     <string name="hint_input_verification">请输入手机获取的短信验证码</string>
     <string name="commit_verification">提交验证码</string>
     <string name="set_login_password_hint">请设置登录密码</string>
     <string name="invitation_code_hint">请输入邀请码(选填)</string>
-    <string name="passwordLength">密码长度6&#8211;20字符</string>
+    <string name="password_length">密码长度6&#8211;20字符</string>
     <string name="commit_login">提交并登录</string>
     <string name="setting_password">设置密码</string>
+    <!-- forget_password-->
+    <string name="forget_pwd">忘记密码</string>
+    <string name="refresh_get_verification">重新获取验证码</string>
+    <string name="hint_verification">请输入验证码</string>
+    <string name="refresh_setting_pwd">重设密码</string>
+    <string name="setting_pwd">请重新确认密码</string>
+
 
     <!-- home-->
     <string name="drawer_open">open</string>
@@ -50,7 +57,8 @@
     <string name="tv_location">定位到当前位置</string>
 
     <!-- my-->
-
+<!--coupon-->
+    <string name="no_coupon">您暂时还没有优惠券</string>
     <!-- reservation-->
     <string name="no_reservation">空空如也，暂时没有预约</string>
 <!--service-->

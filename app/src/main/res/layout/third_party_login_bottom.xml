@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/weChat"
+            android:text="@string/we_chat"
             style="@style/text_nor"
             android:layout_marginLeft="36dp"
             android:layout_marginStart="36dp"
@@ -53,7 +53,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/QQ"
+            android:text="@string/qq"
             style="@style/text_nor"
             android:layout_marginLeft="50dp"
             android:layout_marginStart="50dp"

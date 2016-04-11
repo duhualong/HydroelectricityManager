@@ -63,7 +63,7 @@ public class LoginFragment extends BaseFragment {
             case R.id.forgetPassword:
                 fragmentMgr.beginTransaction()
                         .addToBackStack("")
-                        .replace(R.id.loginContainer, new RegisterPhoneFragment())
+                        .replace(R.id.loginContainer, new ForgetPwdFragment())
                         .commit();
                 break;
             case R.id.btLogin:

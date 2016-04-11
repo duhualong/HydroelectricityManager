@@ -26,6 +26,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import de.hdodenhof.circleimageview.CircleImageView;
 import dhl.com.hydroelectricitymanager.R;
+import dhl.com.hydroelectricitymanager.activity.MyCoupon;
 import dhl.com.hydroelectricitymanager.activity.MyReservation;
 import dhl.com.hydroelectricitymanager.activity.MyService;
 import dhl.com.hydroelectricitymanager.activity.ServiceAddress;
@@ -63,7 +64,7 @@ public class MyFragment extends Fragment {
     @Bind(R.id.customerHotLine)
     RelativeLayout customerHotLine;
 
-    @OnClick({R.id.headPortrait,R.id.name,R.id.phone,R.id.myReservation,R.id.myService,R.id.lifeService,R.id.myAddress,R.id.customerHotLine})
+    @OnClick({R.id.headPortrait,R.id.name,R.id.phone,R.id.discountCoupon,R.id.myReservation,R.id.myService,R.id.lifeService,R.id.myAddress,R.id.customerHotLine})
     public void onClick(View view){
 
         switch (view.getId()){
@@ -72,6 +73,9 @@ public class MyFragment extends Fragment {
                 break;
             case R.id.name:
                 savedName();
+                break;
+            case R.id.discountCoupon:
+                startActivity(new Intent(getActivity(), MyCoupon.class));
                 break;
 
             case R.id.myReservation:
