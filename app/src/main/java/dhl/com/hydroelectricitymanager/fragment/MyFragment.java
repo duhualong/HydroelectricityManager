@@ -1,15 +1,21 @@
 package dhl.com.hydroelectricitymanager.fragment;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +43,11 @@ import dhl.com.hydroelectricitymanager.util.PhotoUtil;
  * 邮箱2383335125@qq.com
  */
 public class MyFragment extends Fragment {
+    private View mainLayout;
+    private static final String TAG = "MyFragment";
+    private static final int REQUEST_WRITE_STORAGE = 111;
+    private static final int REQUEST_CAMERA = 112;
+    final public static int REQUEST_CODE_ASK_CALL_PHONE = 123;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private String saved;
@@ -69,7 +80,22 @@ public class MyFragment extends Fragment {
 
         switch (view.getId()){
             case R.id.headPortrait:
-                showPhotoHeadFindDialog();
+                boolean hasPermission = (ActivityCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+                if (hasPermission) {
+                    if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.CAMERA)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        requestCameraPermission();
+                    } else {
+                        showPhotoHeadFindDialog();
+                    }
+                } else {
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                            REQUEST_WRITE_STORAGE);
+
+                }
+
                 break;
             case R.id.name:
                 savedName();
@@ -93,7 +119,21 @@ public class MyFragment extends Fragment {
 
                 break;
             case R.id.customerHotLine:
-                callHotLine();
+                //电话权限的动态方法
+                if (Build.VERSION.SDK_INT >= 23) {
+                    int checkCallPhonePermission = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.CALL_PHONE);
+                    if(checkCallPhonePermission != PackageManager.PERMISSION_GRANTED){
+                        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CODE_ASK_CALL_PHONE);
+                        return;
+                    }else{
+                        //上面已经写好的拨号方法
+                        callHotLine();
+                    }
+                } else {
+                    //上面已经写好的拨号方法
+                    callHotLine();
+                }
+             //   callHotLine();
                 break;
         }
 
@@ -219,5 +259,54 @@ public class MyFragment extends Fragment {
                     break;
             }
         }
+    }
+
+
+    private void requestCameraPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                Manifest.permission.CAMERA)) {
+            Snackbar.make(mainLayout, "Camera permission is needed to show the camera preview.",
+                    Snackbar.LENGTH_INDEFINITE)
+                    .setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ActivityCompat.requestPermissions(getActivity(),
+                                    new String[]{Manifest.permission.CAMERA},
+                                    REQUEST_CAMERA);
+                        }
+                    }).show();
+        } else {
+            // Camera permission has not been granted yet. Request it directly.
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.CAMERA},
+                    REQUEST_CAMERA);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_WRITE_STORAGE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Snackbar.make(mainLayout, "CAMERA permission has now been granted. Showing preview.",
+                            Snackbar.LENGTH_SHORT).show();
+                } else {
+                    //Log.i(TAG, "CAMERA permission was NOT granted.");
+                    Snackbar.make(mainLayout, "CAMERA permission was NOT granted.",
+                            Snackbar.LENGTH_SHORT).show();
+                }
+                break;
+            case REQUEST_CAMERA:
+                if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    // Camera permission has been granted, preview can be displayed
+                    // Log.i(TAG, "CAMERA permission has now been granted. Showing preview.");
+                    Snackbar.make(mainLayout, "CAMERA permission has now been granted. Showing preview.",
+                            Snackbar.LENGTH_SHORT).show();
+                } else {
+                    //Log.i(TAG, "CAMERA permission was NOT granted.");
+                    Snackbar.make(mainLayout, "CAMERA permission was NOT granted.",
+                            Snackbar.LENGTH_SHORT).show();
+                }
+                break;
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

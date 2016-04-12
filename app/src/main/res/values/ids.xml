@@ -42,8 +42,17 @@
     <item name="btnVar" type="id"/>
     <item name="btnNext" type="id"/>
     <item name="btnCertain" type="id"/>
+    <item name="reInputPwd" type="id"/>
+    <item name="inputPwd" type="id"/>
 
     <!-- home-->
+    <item name="mainLayout" type="id"/>
+    <!-- 发布需求-->
+    <item name="imgFirstUpload" type="id"/>
+    <item name="imgSecondUpload" type="id"/>
+    <item name="imgThirdUpload" type="id"/>
+
+
     <item name="tabDemand" type="id"/>
     <item name="serviceContainer" type="id"/>
     <item name="textView" type="id"/>

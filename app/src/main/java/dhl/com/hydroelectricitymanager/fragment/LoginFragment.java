@@ -52,7 +52,7 @@ public class LoginFragment extends BaseFragment {
     public void onClick(View view){
         switch (view.getId()){
             case R.id.backLeftWhite:
-                onBackPressed();
+                getActivity().finish();
                 break;
             case R.id.register:
                 fragmentMgr.beginTransaction()

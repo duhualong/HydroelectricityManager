@@ -4,9 +4,10 @@
 
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     //地图包、搜索包需要的基础权限
-
+    <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -61,7 +62,10 @@
         <activity android:name=".activity.ServiceAddress"/>
         <!-- addAddress-->
         <activity android:name=".activity.AddAddressActivity"/>
+        <!-- 我的优惠券-->
         <activity android:name=".activity.MyCoupon"/>
+        <!-- 发布需求-->
+        <activity android:name=".activity.PublicRequirement"/>
 
 
 
