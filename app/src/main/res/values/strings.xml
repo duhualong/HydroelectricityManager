@@ -57,6 +57,11 @@
     <string name="tv_location">定位到当前位置</string>
 
     <!-- my-->
+    <!-- 设置服务时间-->
+    <string name="setting_service_time">设置服务时间</string>
+    <string name="setting_service_date">请在下面设置服务日期：</string>
+    <string name="setting_service_times">请在下面设置服务时间：</string>
+
 <!--coupon-->
     <string name="no_coupon">您暂时还没有优惠券</string>
     <!-- reservation-->

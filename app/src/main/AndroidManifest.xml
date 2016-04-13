@@ -67,6 +67,9 @@
         <!-- 发布需求-->
         <activity android:name=".activity.PublicRequirement"/>
 
+        <!-- 设置服务时间-->
+        <activity android:name=".activity.SettingDateTime"/>
+
 
 
         <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->

@@ -89,7 +89,6 @@
             android:layout_height="@dimen/drawable_size"
             android:layout_below="@id/uploadPhoto"
             android:visibility="invisible"
-            android:clickable="false"
             android:layout_toRightOf="@id/imgFirstUpload"
             android:layout_toEndOf="@id/imgFirstUpload"
             android:paddingTop="@dimen/padding_top"
@@ -102,7 +101,6 @@
             android:layout_toRightOf="@id/imgSecondUpload"
             android:layout_below="@id/uploadPhoto"
             android:visibility="invisible"
-            android:clickable="false"
             android:paddingTop="@dimen/padding_top"
             android:src="@drawable/upload_photo"/>
     </RelativeLayout>

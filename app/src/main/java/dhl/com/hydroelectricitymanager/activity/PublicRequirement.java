@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.support.design.widget.Snackbar;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,17 +20,30 @@ import android.widget.Toast;
 
 import com.soundcloud.android.crop.Crop;
 
+import java.io.File;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import dhl.com.hydroelectricitymanager.R;
-import dhl.com.hydroelectricitymanager.util.PhotoUtil;
 
 /**
  * 作者：adu on 2016/4/12 13:29
  * 邮箱2383335125@qq.com
  */
 public class PublicRequirement extends BaseActivity {
-    private static final int REQUEST_CAMERA = 0;
+    private static File tempFile;
+    public static final int MYIMG1_REQUEST_CAMERA =401;
+    public static final int MYIMG1_REQUEST_CROP=402;
+    public static final int MYIMG1_REQUEST_GALLERY =403;
+    public static final int MYIMG2_REQUEST_CAMERA = 411;
+    public static final int MYIMG2_REQUEST_CROP=412;
+    public static final int MYIMG2_REQUEST_GALLERY = 413;
+    public static final int MYIMG3_REQUEST_CAMERA = 421;
+    public static final int MYIMG3_REQUEST_CROP=422;
+    public static final int MYIMG3_REQUEST_GALLERY =423;
+    private int number=0;
+    private static final int REQUEST_WRITE_STORAGE = 111;
+    private static final int REQUEST_CAMERA = 112;
     private View mLayout;
     @Bind(R.id.backLeftWhite)
     ImageView backLeft;
@@ -55,15 +70,31 @@ public class PublicRequirement extends BaseActivity {
             onBackPressed();
             break;
             case R.id.imgFirstUpload:
-                showPhotoHeadFindDialog();
+                boolean hasPermission = (ActivityCompat.checkSelfPermission(context,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED);
+                if (hasPermission) {
+                    if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
+                            != PackageManager.PERMISSION_GRANTED) {
+
+                        ActivityCompat.requestPermissions(PublicRequirement.this, new String[]{Manifest.permission.CAMERA},
+                                REQUEST_CAMERA);
+                    } else {
+                        showPhotoHeadFindDialog(MYIMG1_REQUEST_GALLERY,MYIMG1_REQUEST_CAMERA);
+                    }
+                } else {
+                    ActivityCompat.requestPermissions(PublicRequirement.this,
+                            new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                            REQUEST_WRITE_STORAGE);
+                }
                 break;
             case R.id.imgSecondUpload:
-
+                showPhotoHeadFindDialog(MYIMG2_REQUEST_GALLERY,MYIMG2_REQUEST_CAMERA);
                 break;
             case R.id.imgThirdUpload:
-
+                showPhotoHeadFindDialog(MYIMG3_REQUEST_GALLERY,MYIMG3_REQUEST_CAMERA);
                 break;
             case R.id.serviceTime:
+                startActivity(new Intent(context,SettingDateTime.class));
 
                 break;
             case R.id.serviceAddress:
@@ -83,25 +114,19 @@ public class PublicRequirement extends BaseActivity {
     }
 
 
-    private void showPhotoHeadFindDialog() {
+    private void showPhotoHeadFindDialog(final int gallery,final int camera) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setView(View.inflate(context, R.layout.dialog_modify_photo_head, null)).
                 setPositiveButton("相册", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        PhotoUtil.startGallery(PublicRequirement.this);
+                        startGallery(PublicRequirement.this,gallery);
 
                     }
                 }).setNegativeButton("相机", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                if (ActivityCompat.checkSelfPermission(PublicRequirement.this, Manifest.permission.CAMERA)
-                        != PackageManager.PERMISSION_GRANTED) {
-                    requestCameraPermission();
-                }else {
-                    PhotoUtil.startCamera(PublicRequirement.this);
-                }
-
+                startCamera(PublicRequirement.this,camera);
 
             }
         }).setCancelable(true);
@@ -115,24 +140,66 @@ public class PublicRequirement extends BaseActivity {
        if (resultCode == Activity.RESULT_OK) {
             Uri uri;
             switch (requestCode) {
-                case PhotoUtil.REQUEST_CAMERA:
-                    uri = Uri.fromFile(PhotoUtil.getTempFile());
-                    PhotoUtil.beginCrop(PublicRequirement.this, uri);
+                case MYIMG1_REQUEST_CAMERA:
+                    uri = Uri.fromFile(getTempFile());
+                    beginCrop(PublicRequirement.this, uri, MYIMG1_REQUEST_CROP);
                     break;
-                case PhotoUtil.REQUEST_GALLERY:
+                case MYIMG1_REQUEST_GALLERY:
                     if (data != null) {
                         uri = data.getData();
-                        PhotoUtil.beginCrop(PublicRequirement.this, uri);
+                        beginCrop(PublicRequirement.this, uri, MYIMG1_REQUEST_CROP);
                     }
                     break;
-                case PhotoUtil.REQUEST_CROP:
+                case MYIMG1_REQUEST_CROP:
                     if (data != null) {
                         uri = Crop.getOutput(data); // 裁剪后图片Uri
                         System.out.println("image uri: " + uri);
                         imgFirstUpload.setImageURI(uri);
-                        Toast.makeText(context, "上传头像成功！", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "上传照片成功！", Toast.LENGTH_SHORT).show();
+                        imgSecondUpload.setVisibility(View.VISIBLE);
+                        break;
+
+                    }
+
+                case MYIMG2_REQUEST_CAMERA:
+                    uri = Uri.fromFile(getTempFile());
+                    beginCrop(PublicRequirement.this, uri, MYIMG2_REQUEST_CROP);
+                    break;
+                case MYIMG2_REQUEST_GALLERY:
+                    if (data != null) {
+                        uri = data.getData();
+                        beginCrop(PublicRequirement.this, uri, MYIMG2_REQUEST_CROP);
                     }
                     break;
+                case MYIMG2_REQUEST_CROP:
+                    if (data != null) {
+                        uri = Crop.getOutput(data); // 裁剪后图片Uri
+                        System.out.println("image uri: " + uri);
+                        imgSecondUpload.setImageURI(uri);
+                        Toast.makeText(context, "上传照片成功！", Toast.LENGTH_SHORT).show();
+                        imgThirdUpload.setVisibility(View.VISIBLE);
+                        break;
+
+                    }
+                case MYIMG3_REQUEST_CAMERA:
+                    uri = Uri.fromFile(getTempFile());
+                    beginCrop(PublicRequirement.this, uri, MYIMG3_REQUEST_CROP);
+                    break;
+                case MYIMG3_REQUEST_GALLERY:
+                    if (data != null) {
+                        uri = data.getData();
+                        beginCrop(PublicRequirement.this, uri, MYIMG3_REQUEST_CROP);
+                    }
+                    break;
+                case MYIMG3_REQUEST_CROP:
+                    if (data != null) {
+                        uri = Crop.getOutput(data); // 裁剪后图片Uri
+                        System.out.println("image uri: " + uri);
+                        imgThirdUpload.setImageURI(uri);
+                        Toast.makeText(context, "上传照片成功！", Toast.LENGTH_SHORT).show();
+                        break;
+
+                    }
             }
         super.onActivityResult(requestCode, resultCode, data);
      }
@@ -140,22 +207,49 @@ public class PublicRequirement extends BaseActivity {
 
 
 
+    public static void startCamera(Activity activity,int requestCode) {
+        // 激活相机
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 
-
-    private void requestCameraPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this,
-                Manifest.permission.CAMERA)) {
-            Snackbar.make(mLayout,"dudu",Snackbar.LENGTH_INDEFINITE).setAction("ok", new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ActivityCompat.requestPermissions(PublicRequirement.this,
-                            new String[]{Manifest.permission.CAMERA},REQUEST_CAMERA);
-                }
-            }).show();
-        }else {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},  REQUEST_CAMERA);
+        Uri uri =setTempFile("capture");
+        if (uri != null) {
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+            // 开启一个带有返回值的Activity，请求码为REQUEST_CAMERA
+            activity.startActivityForResult(intent, requestCode);
         }
     }
 
+    public static void startGallery(Activity activity,int requestCode) {
+        //激活系统图库，选择一张图片
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType("image/*");
+        // 开启一个带有返回值的Activity，请求码为REQUEST_GALLERY
+        activity.startActivityForResult(intent, requestCode);
+    }
 
+    public static void beginCrop(Activity activity, Uri source, int requestCode ) {
+        //  Activity activity = fragment.getActivity();
+        Uri destination = Uri.fromFile(new File(activity.getCacheDir(), "cropped"));
+        Crop.of(source, destination).asSquare().start(activity, requestCode);
+
+    }
+    public static Uri setTempFile(String imageTag) {
+        Uri uri = null;
+        if (Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED)) {
+            tempFile = new File(Environment.getExternalStorageDirectory(), imageTag);
+            uri = Uri.fromFile(tempFile);
+            Log.d("PhotoUtils", "create new uri: " + uri);
+        } else {
+            Log.e("PhotoUtils", "no external storage exist");
+        }
+        return uri;
+    }
+
+    /**
+     * 获取相机拍摄图片保存地址
+     */
+    public static File getTempFile() {
+        return tempFile;
+    }
 }

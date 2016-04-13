@@ -51,6 +51,12 @@
     <item name="imgFirstUpload" type="id"/>
     <item name="imgSecondUpload" type="id"/>
     <item name="imgThirdUpload" type="id"/>
+    <item name="finishedTime" type="id"/>
+    <item name="dateService" type="id"/>
+    <item name="timeService" type="id"/>
+    <item name="datePicker" type="id"/>
+    <item name="timePicker" type="id"/>
+
 
 
     <item name="tabDemand" type="id"/>

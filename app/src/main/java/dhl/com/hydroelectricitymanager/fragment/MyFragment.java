@@ -44,7 +44,6 @@ import dhl.com.hydroelectricitymanager.util.PhotoUtil;
  */
 public class MyFragment extends Fragment {
     private View mainLayout;
-    private static final String TAG = "MyFragment";
     private static final int REQUEST_WRITE_STORAGE = 111;
     private static final int REQUEST_CAMERA = 112;
     final public static int REQUEST_CODE_ASK_CALL_PHONE = 123;
@@ -95,7 +94,6 @@ public class MyFragment extends Fragment {
                             REQUEST_WRITE_STORAGE);
 
                 }
-
                 break;
             case R.id.name:
                 savedName();
