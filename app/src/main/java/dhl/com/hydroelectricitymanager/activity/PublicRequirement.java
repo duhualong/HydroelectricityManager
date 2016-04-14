@@ -3,8 +3,10 @@ package dhl.com.hydroelectricitymanager.activity;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
@@ -12,6 +14,7 @@ import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -41,10 +44,9 @@ public class PublicRequirement extends BaseActivity {
     public static final int MYIMG3_REQUEST_CAMERA = 421;
     public static final int MYIMG3_REQUEST_CROP=422;
     public static final int MYIMG3_REQUEST_GALLERY =423;
-    private int number=0;
     private static final int REQUEST_WRITE_STORAGE = 111;
     private static final int REQUEST_CAMERA = 112;
-    private View mLayout;
+
     @Bind(R.id.backLeftWhite)
     ImageView backLeft;
     @Bind(R.id.etDescriptionProblem)
@@ -63,7 +65,9 @@ public class PublicRequirement extends BaseActivity {
     RelativeLayout serviceAddress;
     @Bind(R.id.selectedServiceAddress)
     TextView selectedServiceAddress;
-    @OnClick({R.id.backLeftWhite,R.id.serviceTime,R.id.serviceAddress,R.id.imgFirstUpload,R.id.imgSecondUpload,R.id.imgThirdUpload})
+    @Bind(R.id.immediatePay)
+    Button immediatePay;
+    @OnClick({R.id.backLeftWhite,R.id.serviceTime,R.id.serviceAddress,R.id.imgFirstUpload,R.id.imgSecondUpload,R.id.imgThirdUpload,R.id.immediatePay})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.backLeftWhite:
@@ -98,7 +102,12 @@ public class PublicRequirement extends BaseActivity {
 
                 break;
             case R.id.serviceAddress:
+                startActivity(new Intent(context,ServiceAddress.class));
 
+                break;
+            case R.id.immediatePay:
+
+                startActivity(new Intent(context,OrderConfirmHydroelectricity.class));
                 break;
 
         }
@@ -111,8 +120,26 @@ public class PublicRequirement extends BaseActivity {
     @Override
     protected void updateUI() {
 
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+        String savedServiceTime= sharedPreferences.getString("savedServiceTime", "");
+        selectedServiceTime.setText(savedServiceTime);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("savedServiceTime","");
+        editor.apply();
+
+    }
 
     private void showPhotoHeadFindDialog(final int gallery,final int camera) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);

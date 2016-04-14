@@ -130,6 +130,7 @@
             android:src="@drawable/upload_photo"/>
     </RelativeLayout>
     <RelativeLayout
+        android:id="@id/rlCoupon"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/small_top_distance"
         android:background="@color/white"
@@ -202,6 +203,7 @@
        android:paddingBottom="@dimen/small_top_distance"
        android:text="@string/payment_method"/>
     <RelativeLayout
+        android:id="@id/aliPayRl"
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_height="@dimen/height_edit_text">
@@ -218,20 +220,23 @@
             android:layout_marginStart="@dimen/left_distance"
             android:text="@string/ali_pay_payment"/>
 
-        <ImageView
+        <CheckBox
             android:id="@id/aliPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_selected_payment"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            android:checked="true"
+            style="@style/CustomCheckboxTheme"
             android:layout_marginEnd="@dimen/right_distance"
             android:layout_marginRight="@dimen/right_distance"
             android:layout_alignParentRight="true"/>
+
     </RelativeLayout>
     <View
         style="@style/divider"/>
     <RelativeLayout
+        android:id="@id/weChatRl"
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_height="@dimen/height_edit_text">
@@ -247,17 +252,26 @@
             android:layout_marginLeft="@dimen/left_distance"
             android:layout_marginStart="@dimen/left_distance"
             android:text="@string/we_chat_payment"/>
-
-        <ImageView
+        <CheckBox
             android:id="@id/weChatPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_default_selected"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
+            style="@style/CustomCheckboxTheme"
             android:layout_marginEnd="@dimen/right_distance"
             android:layout_marginRight="@dimen/right_distance"
             android:layout_alignParentRight="true"/>
+        <!--<ImageView-->
+            <!--android:id="@id/weChatPayment"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/ic_default_selected"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginEnd="@dimen/right_distance"-->
+            <!--android:layout_marginRight="@dimen/right_distance"-->
+            <!--android:layout_alignParentRight="true"/>-->
     </RelativeLayout>
             <Button
                 android:id="@id/orderPayment"

@@ -56,6 +56,10 @@
     <item name="timeService" type="id"/>
     <item name="datePicker" type="id"/>
     <item name="timePicker" type="id"/>
+    <!-- 水电管家订单支付-->
+    <item name="rlCoupon" type="id"/>
+    <item name="weChatRl" type="id"/>
+    <item name="aliPayRl" type="id"/>
 
 
 

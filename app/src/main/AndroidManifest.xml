@@ -69,6 +69,8 @@
 
         <!-- 设置服务时间-->
         <activity android:name=".activity.SettingDateTime"/>
+        <!-- 水电管家订单确认-->
+        <activity android:name=".activity.OrderConfirmHydroelectricity"/>
 
 
 
