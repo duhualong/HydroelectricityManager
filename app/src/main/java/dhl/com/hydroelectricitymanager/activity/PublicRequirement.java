@@ -11,6 +11,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
@@ -46,7 +47,8 @@ public class PublicRequirement extends BaseActivity {
     public static final int MYIMG3_REQUEST_GALLERY =423;
     private static final int REQUEST_WRITE_STORAGE = 111;
     private static final int REQUEST_CAMERA = 112;
-
+    @Bind(R.id.rlRequirement)
+    RelativeLayout mainLayout;
     @Bind(R.id.backLeftWhite)
     ImageView backLeft;
     @Bind(R.id.etDescriptionProblem)
@@ -79,9 +81,7 @@ public class PublicRequirement extends BaseActivity {
                 if (hasPermission) {
                     if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
                             != PackageManager.PERMISSION_GRANTED) {
-
-                        ActivityCompat.requestPermissions(PublicRequirement.this, new String[]{Manifest.permission.CAMERA},
-                                REQUEST_CAMERA);
+                        requestCameraPermission();
                     } else {
                         showPhotoHeadFindDialog(MYIMG1_REQUEST_GALLERY,MYIMG1_REQUEST_CAMERA);
                     }
@@ -278,5 +278,62 @@ public class PublicRequirement extends BaseActivity {
      */
     public static File getTempFile() {
         return tempFile;
+    }
+
+
+    private void requestCameraPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(PublicRequirement.this,
+                Manifest.permission.CAMERA)) {
+            Snackbar.make(mainLayout, "需要摄像头的权限，以显示相机预览",
+                    Snackbar.LENGTH_INDEFINITE)
+                    .setAction("OK", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            ActivityCompat.requestPermissions(PublicRequirement.this,
+                                    new String[]{Manifest.permission.CAMERA},
+                                    REQUEST_CAMERA);
+                        }
+                    }).show();
+        } else {
+            // Camera permission has not been granted yet. Request it directly.
+            ActivityCompat.requestPermissions(PublicRequirement.this, new String[]{Manifest.permission.CAMERA},
+                    REQUEST_CAMERA);
+        }
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_WRITE_STORAGE:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CAMERA)
+                            != PackageManager.PERMISSION_GRANTED) {
+                        requestCameraPermission();
+                    } else {
+                        showPhotoHeadFindDialog(MYIMG1_REQUEST_GALLERY,MYIMG1_REQUEST_CAMERA);
+                    }
+
+//                    Snackbar.make(mainLayout, "CAMERA permission has now been granted. Showing preview.",
+//                            Snackbar.LENGTH_SHORT).show();
+                } else {
+                    //Log.i(TAG, "CAMERA permission was NOT granted.");
+                    Snackbar.make(mainLayout, "请允许访问设备上照片和文件",
+                            Snackbar.LENGTH_SHORT).show();
+                }
+                break;
+            case REQUEST_CAMERA:
+                if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    showPhotoHeadFindDialog(MYIMG1_REQUEST_GALLERY,MYIMG1_REQUEST_CAMERA);
+                    // Camera permission has been granted, preview can be displayed
+                    // Log.i(TAG, "CAMERA permission has now been granted. Showing preview.");
+//                    Snackbar.make(mainLayout, "CAMERA permission has now been granted. Showing preview.",
+//                            Snackbar.LENGTH_SHORT).show();
+                } else {
+                    //Log.i(TAG, "CAMERA permission was NOT granted.");
+                    Snackbar.make(mainLayout, "需要摄像头的权限，以显示相机预览",
+                            Snackbar.LENGTH_SHORT).show();
+                }
+                break;
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

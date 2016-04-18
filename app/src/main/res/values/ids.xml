@@ -48,6 +48,7 @@
     <!-- home-->
     <item name="mainLayout" type="id"/>
     <!-- 发布需求-->
+    <item name="rlRequirement" type="id"/>
     <item name="imgFirstUpload" type="id"/>
     <item name="imgSecondUpload" type="id"/>
     <item name="imgThirdUpload" type="id"/>
@@ -60,6 +61,7 @@
     <item name="rlCoupon" type="id"/>
     <item name="weChatRl" type="id"/>
     <item name="aliPayRl" type="id"/>
+
 
 
 

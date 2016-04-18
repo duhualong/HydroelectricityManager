@@ -24,7 +24,6 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
 
@@ -49,7 +48,7 @@
         </activity>
         <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
         <activity android:name=".activity.ContainerActivity"/>
-        <activity android:name=".activity.DropdownList"/>
+        <!--<activity android:name=".activity.DropdownList"/>-->
         <activity android:name=".activity.ServiceDemandActivity"/>
         <activity android:name=".activity.ServiceDemandActivityText"/>
         <activity android:name=".activity.FilterContainer"/>

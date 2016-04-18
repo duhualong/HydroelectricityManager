@@ -21,6 +21,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,7 +44,7 @@ import dhl.com.hydroelectricitymanager.util.PhotoUtil;
  * 邮箱2383335125@qq.com
  */
 public class MyFragment extends Fragment {
-    private View mainLayout;
+
     private static final int REQUEST_WRITE_STORAGE = 111;
     private static final int REQUEST_CAMERA = 112;
     final public static int REQUEST_CODE_ASK_CALL_PHONE = 123;
@@ -55,6 +56,8 @@ public class MyFragment extends Fragment {
     TextView name;
     @Bind(R.id.phone)
     TextView phone;
+    @Bind(R.id.mainLayout)
+    LinearLayout mainLayout;
     @Bind(R.id.headPortrait)
     CircleImageView headPortrait;
     @Bind(R.id.accountBalance)
@@ -263,7 +266,7 @@ public class MyFragment extends Fragment {
     private void requestCameraPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
                 Manifest.permission.CAMERA)) {
-            Snackbar.make(mainLayout, "Camera permission is needed to show the camera preview.",
+            Snackbar.make(mainLayout, "需要摄像头的权限，以显示相机预览",
                     Snackbar.LENGTH_INDEFINITE)
                     .setAction("OK", new View.OnClickListener() {
                         @Override
