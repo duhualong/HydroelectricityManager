@@ -15,6 +15,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dhl.com.hydroelectricitymanager.R;
+import dhl.com.hydroelectricitymanager.activity.DropDownActivity;
 import dhl.com.hydroelectricitymanager.activity.LoginActivity;
 import dhl.com.hydroelectricitymanager.activity.ServiceDemandActivity;
 
@@ -36,7 +37,7 @@ public class HomeFragment extends Fragment {
     public void dropdownList(View view){
         switch (view.getId()) {
             case R.id.dropdownList:
-//        startActivity(new Intent(getActivity(), DropDownList.class));
+       startActivity(new Intent(getActivity(), DropDownActivity.class));
                 break;
             case R.id.hydroelectricManager:
                 startActivity(new Intent(getActivity(), ServiceDemandActivity.class));
