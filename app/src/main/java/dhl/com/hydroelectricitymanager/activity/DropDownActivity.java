@@ -175,6 +175,12 @@ public class DropDownActivity extends Activity implements LocationSource,AMapLoc
             if(amapLocation.getErrorCode() == 0) {
                 mListener.onLocationChanged(amapLocation);// 显示系统小蓝点
                address= amapLocation.getAddress();
+
+                SharedPreferences sharedPreferences=getSharedPreferences("data", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.putString("locations", address);
+                editor.apply();
+
                 lat=amapLocation.getLatitude();
                 lng=amapLocation.getLongitude();
                 if (lat != 0 && lng != 0) {
@@ -239,10 +245,7 @@ public class DropDownActivity extends Activity implements LocationSource,AMapLoc
        TextView titleView= (TextView) view.findViewById(R.id.textView);
        TextView btnCertain= (TextView) view.findViewById(R.id.btnCertain);
         if (!TextUtils.isEmpty(address)) {
-            SharedPreferences sharedPreferences=getSharedPreferences("data",Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor=sharedPreferences.edit();
-            editor.putString("locations",address);
-            editor.apply();
+
             titleView.setText(address);
         }
 
