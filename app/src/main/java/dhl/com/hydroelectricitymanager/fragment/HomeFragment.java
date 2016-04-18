@@ -1,12 +1,9 @@
 package dhl.com.hydroelectricitymanager.fragment;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +15,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dhl.com.hydroelectricitymanager.R;
-
 import dhl.com.hydroelectricitymanager.activity.LoginActivity;
 import dhl.com.hydroelectricitymanager.activity.ServiceDemandActivity;
 
@@ -40,7 +36,7 @@ public class HomeFragment extends Fragment {
     public void dropdownList(View view){
         switch (view.getId()) {
             case R.id.dropdownList:
-        //    startActivity(new Intent(getActivity(), DropdownList.class));
+//        startActivity(new Intent(getActivity(), DropDownList.class));
                 break;
             case R.id.hydroelectricManager:
                 startActivity(new Intent(getActivity(), ServiceDemandActivity.class));
@@ -59,11 +55,11 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mainView = inflater.inflate(R.layout.home_fragment, container, false);
         ButterKnife.bind(this,mainView);
-        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
-       String locations=sharedPreferences.getString("locations","");
-        if (!TextUtils.isEmpty(locations)){
-            tvLocation.setText(locations);
-        }
+//        SharedPreferences sharedPreferences=getActivity().getSharedPreferences("data", Context.MODE_PRIVATE);
+//        String locations=sharedPreferences.getString("locations","");
+//        if (!TextUtils.isEmpty(locations)){
+//            tvLocation.setText(locations);
+//        }
         return mainView;
     }
 
